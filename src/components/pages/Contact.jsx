@@ -22,7 +22,7 @@ const ContactUs = () => {
             {/* Support Image - As seen in your screenshot */}
             <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" 
+                src="/images/Contactusimage.jfif" 
                 alt="Customer Support" 
                 className="w-full h-[400px] object-cover"
               />

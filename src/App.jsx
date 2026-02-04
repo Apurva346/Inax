@@ -6,6 +6,7 @@ import MachineDetails from './components/pages/MachineDetails';
 import WhatsAppFloat from './components/common/WhatsAppFloat';
 import Inax from './components/pages/Inax';
 import Footer from './components/common/Footer';
+import AllMachines from './components/pages/AllMachines';
 
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/machine/:id" element={<MachineDetails />} />
-            
-            <Route path="/i-nax" element={<Inax />} />
+            <Route path="/all-machines" element={<AllMachines />} />
+            <Route path="/" element={<Inax />} />
           </Routes>
         </main>
         <WhatsAppFloat />

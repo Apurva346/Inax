@@ -10,6 +10,7 @@ import {
   CheckCircle,
   Globe
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Inax = () => {
   return (
@@ -20,7 +21,7 @@ const Inax = () => {
         {/* Background Image with Screen-accurate Overlay */}
         <div className='absolute inset-0 z-0 w-full h-full'>
           <img
-            src='https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80'
+            src='/images/Closeup of CNC turning machine.webp'
             className='w-full h-full object-cover opacity-60'
             alt='Modern Industrial CNC'
           />
@@ -42,9 +43,14 @@ const Inax = () => {
 
           {/* Buttons - Yellow & White combination from screenshot */}
           <div className='flex flex-wrap gap-4'>
-            <button className='bg-[#FFB800] hover:bg-yellow-500 text-black font-extrabold px-10 py-4 rounded-md text-xs uppercase tracking-widest transition-all shadow-xl active:scale-95'>
+            {/* <button className='bg-[#FFB800] hover:bg-yellow-500 text-black font-extrabold px-10 py-4 rounded-md text-xs uppercase tracking-widest transition-all shadow-xl active:scale-95'>
               Explore Machines
-            </button>
+            </button> */}
+            <Link to='/all-machines'>
+              <button className='bg-[#FFB800] hover:bg-yellow-500 text-black font-extrabold px-10 py-4 rounded-md text-xs uppercase tracking-widest transition-all shadow-xl active:scale-95'>
+                Explore Machines
+              </button>
+            </Link>
             <button className='bg-white hover:bg-gray-100 text-black font-extrabold px-10 py-4 rounded-md text-xs uppercase tracking-widest transition-all shadow-xl active:scale-95'>
               Get a Quote
             </button>
@@ -240,20 +246,23 @@ const Inax = () => {
               </h2>
               <div className='w-24 h-1 bg-red-700 mt-2'></div>
             </div>
-            <button className='text-xs font-black uppercase tracking-widest text-red-700 flex items-center gap-2 hover:gap-4 transition-all'>
+            <Link to="/all-machines" onClick={() => window.scrollTo(0, 0)}>
+              <button className='text-xs font-black uppercase tracking-widest text-red-700 flex items-center gap-2 hover:gap-4 transition-all'>
               View All <ArrowRight size={16} />
             </button>
+            </Link>
+            
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
                 title: 'CNC Machines',
-                img: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=600'
+                img: '/images/I-NAX CNC Milling Machine Showcase.png'
               },
               {
                 title: 'Lathe Machines',
-                img: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600'
+                img: '/images/I-NAX Metal Lathe in Detail.png'
               },
               {
                 title: 'Precision Units',
@@ -261,7 +270,7 @@ const Inax = () => {
               },
               {
                 title: 'Support Services',
-                img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600'
+                img: '/images/Contactusimage.jfif'
               }
             ].map((product, i) => (
               <div key={i} className='group cursor-pointer'>
@@ -318,7 +327,7 @@ const Inax = () => {
             <div className='flex-1 relative flex justify-center'>
               <div className='relative w-80 h-80 md:w-96 md:h-96 bg-[#0f172a] rounded-full p-2 shadow-2xl overflow-hidden group'>
                 <img
-                  src='https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80'
+                  src='/images/Whychooseinax.jfif'
                   className='w-full h-full object-cover rounded-full opacity-60 group-hover:scale-110 transition-all duration-700'
                   alt='i-NAX Machine'
                 />
@@ -434,9 +443,11 @@ const Inax = () => {
 
           {/* Compact CTA Button - Red accent to pop on Dark background */}
           <div className='mt-12 flex justify-center'>
-            <button className='bg-red-700 text-white px-10 py-3.5 rounded-md font-bold uppercase tracking-widest text-[10px] hover:bg-white hover:text-[#0f172a] transition-all shadow-lg active:scale-95'>
-              Talk To Our Experts
-            </button>
+            <Link to='/contact' onClick={() => window.scrollTo(0, 0)}>
+              <button className='bg-red-700 text-white px-10 py-3.5 rounded-md font-bold uppercase tracking-widest text-[10px] hover:bg-white hover:text-[#0f172a] transition-all shadow-lg active:scale-95'>
+                Talk To Our Experts
+              </button>
+            </Link>
           </div>
         </div>
       </section>
