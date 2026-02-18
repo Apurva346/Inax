@@ -16,7 +16,6 @@ const Inax = () => {
   return (
     <div className='w-full overflow-hidden bg-white font-sans'>
       {/* SECTION 1: HERO - Ultra Modern Look */}
-
       <section className='relative h-[600px] w-full flex items-center overflow-hidden bg-[#0f172a]'>
         {/* Background Image with Screen-accurate Overlay */}
         <div className='absolute inset-0 z-0 w-full h-full'>
@@ -51,13 +50,14 @@ const Inax = () => {
                 Explore Machines
               </button>
             </Link>
-            <button className='bg-white hover:bg-gray-100 text-black font-extrabold px-10 py-4 rounded-md text-xs uppercase tracking-widest transition-all shadow-xl active:scale-95'>
-              Get a Quote
-            </button>
+            <Link to='/contact'>
+              <button className='bg-white hover:bg-gray-100 text-black font-extrabold px-10 py-4 rounded-md text-xs uppercase tracking-widest transition-all shadow-xl active:scale-95'>
+                Get a Quote
+              </button>
+            </Link>
           </div>
         </div>
       </section>
-
       {/* SECTION 2: OUR STORY - Professional & Clean */}
       <section className='py-24 bg-white w-full overflow-hidden border-b border-gray-100'>
         <div className='max-w-7xl mx-auto px-4'>
@@ -94,6 +94,20 @@ const Inax = () => {
                   machines built to endure."
                 </p>
               </div>
+
+              {/* --- नवीन READ MORE बटण येथे जोडले आहे --- */}
+              <div className='pt-4'>
+                <Link to='/about'>
+                  <button className='group flex items-center gap-3 bg-[#0f172a] hover:bg-red-700 text-white px-8 py-4 rounded-md font-bold transition-all duration-300 shadow-lg shadow-blue-900/20 active:scale-95 uppercase text-xs tracking-widest'>
+                    Read Full Story
+                    <ArrowRight
+                      size={18}
+                      className='group-hover:translate-x-2 transition-transform'
+                    />
+                  </button>
+                </Link>
+              </div>
+              {/* ------------------------------------------ */}
             </div>
 
             {/* Interactive Timeline */}
@@ -147,8 +161,9 @@ const Inax = () => {
           </div>
         </div>
       </section>
-
       {/* SECTION 3: WHO WE ARE - Content Rich */}
+      
+      
       <section className='py-24 bg-[#0f172a] text-white w-full overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4'>
           <div className='flex flex-col lg:flex-row items-center gap-20'>
@@ -174,6 +189,7 @@ const Inax = () => {
                   Engineered to perform consistently under demanding industrial
                   conditions.
                 </p>
+
                 <div className='flex flex-wrap gap-4 pt-6'>
                   {['Accuracy', 'Durability', 'Stability'].map(tag => (
                     <span
@@ -184,6 +200,20 @@ const Inax = () => {
                     </span>
                   ))}
                 </div>
+
+                {/* --- नवीन READ MORE बटण येथे जोडले आहे --- */}
+                <div className='pt-8'>
+                  <Link to='/about'>
+                    <button className='group flex items-center gap-4 bg-white text-[#0f172a] hover:bg-red-700 hover:text-white px-8 py-4 rounded-sm font-black transition-all duration-300 uppercase text-xs tracking-[0.2em] shadow-xl'>
+                      Read More
+                      <ArrowRight
+                        size={18}
+                        className='group-hover:translate-x-2 transition-transform'
+                      />
+                    </button>
+                  </Link>
+                </div>
+                {/* ------------------------------------------ */}
               </div>
             </div>
 
@@ -204,7 +234,6 @@ const Inax = () => {
           </div>
         </div>
       </section>
-
       {/* SECTION 4: WHAT MAKES US DIFFERENT */}
       <section className='py-24 bg-gray-50 overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 text-center'>
@@ -235,7 +264,6 @@ const Inax = () => {
           </div>
         </div>
       </section>
-
       {/* SECTION 5: PRODUCT RANGE */}
       <section className='py-24 bg-white'>
         <div className='max-w-7xl mx-auto px-4'>
@@ -246,12 +274,11 @@ const Inax = () => {
               </h2>
               <div className='w-24 h-1 bg-red-700 mt-2'></div>
             </div>
-            <Link to="/all-machines" onClick={() => window.scrollTo(0, 0)}>
+            <Link to='/all-machines' onClick={() => window.scrollTo(0, 0)}>
               <button className='text-xs font-black uppercase tracking-widest text-red-700 flex items-center gap-2 hover:gap-4 transition-all'>
-              View All <ArrowRight size={16} />
-            </button>
+                View All <ArrowRight size={16} />
+              </button>
             </Link>
-            
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
@@ -277,7 +304,7 @@ const Inax = () => {
                 <div className='relative h-80 overflow-hidden rounded-2xl mb-6'>
                   <img
                     src={product.img}
-                    className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-700'
+                    className='w-full h-full  group-hover:scale-110 transition-transform duration-700'
                   />
                   <div className='absolute inset-0 bg-black/20 group-hover:bg-red-700/40 transition-all'></div>
                 </div>
@@ -292,7 +319,6 @@ const Inax = () => {
           </div>
         </div>
       </section>
-
       {/* SECTION 6: WHY CHOOSE I-NAX (Modern Diagram Style) */}
       <section className='py-24 bg-gray-50 w-full'>
         <div className='max-w-7xl mx-auto px-4'>
@@ -362,9 +388,7 @@ const Inax = () => {
           </div>
         </div>
       </section>
-
       {/* SECTION 7: TRUST - Dark Grid */}
-
       <section className='py-20 bg-[#0f172a] w-full border-t border-white/5'>
         <div className='max-w-7xl mx-auto px-6'>
           {/* Title Section - Adjusted for Dark Theme */}
@@ -451,9 +475,7 @@ const Inax = () => {
           </div>
         </div>
       </section>
-
       {/* SECTION 8: SERVICES - Integrated Hub */}
-
       <section className='py-20 bg-white w-full'>
         <div className='max-w-7xl mx-auto px-6'>
           {/* Compact Header */}

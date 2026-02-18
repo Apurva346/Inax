@@ -7,6 +7,7 @@ import WhatsAppFloat from './components/common/WhatsAppFloat';
 import Inax from './components/pages/Inax';
 import Footer from './components/common/Footer';
 import AllMachines from './components/pages/AllMachines';
+import WhyChooseUs from './components/pages/WhyChooseUs';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/machine/:id" element={<MachineDetails />} />
             <Route path="/all-machines" element={<AllMachines />} />
             <Route path="/" element={<Inax />} />
+            <Route path="/why-choose-us" element={<WhyChooseUs />} />
           </Routes>
         </main>
         <WhatsAppFloat />
