@@ -31,7 +31,7 @@ const Inax = () => {
         <div className='max-w-7xl mx-auto px-8 relative z-10 text-white w-full'>
           {/* Clean Typography like screenshot */}
           <h1 className='text-5xl md:text-7xl font-bold mb-4 tracking-tight leading-[1.1]'>
-            I-NAX™ – Built for <br />
+            i-NAX™ – Built for <br />
             <span className='text-white'>Performance</span>
           </h1>
 
@@ -98,7 +98,7 @@ const Inax = () => {
               {/* --- नवीन READ MORE बटण येथे जोडले आहे --- */}
               <div className='pt-4'>
                 <Link to='/about'>
-                  <button className='group flex items-center gap-3 bg-[#0f172a] hover:bg-red-700 text-white px-8 py-4 rounded-md font-bold transition-all duration-300 shadow-lg shadow-blue-900/20 active:scale-95 uppercase text-xs tracking-widest'>
+                  <button className='uppercase group flex items-center gap-3 bg-[#0f172a] hover:bg-red-700 text-white px-8 py-4 rounded-md font-bold transition-all duration-300 shadow-lg shadow-blue-900/20 active:scale-95 text-xs tracking-widest'>
                     Read Full Story
                     <ArrowRight
                       size={18}
@@ -118,19 +118,19 @@ const Inax = () => {
                 {[
                   {
                     year: '2012',
-                    title: 'Mech Chem Foundation',
+                    title: 'MECH CHEM FOUNDATION',
                     desc: 'Expertise in Industrial Service',
                     color: 'bg-[#1e3a8a]'
                   },
                   {
                     year: '2024',
-                    title: 'i-NAX™ Brand Launch',
+                    title: 'i-NAX™ BRAND LAUNCH',
                     desc: 'Premium Precision Machinery',
                     color: 'bg-red-700'
                   },
                   {
                     year: 'Future',
-                    title: 'Global Impact',
+                    title: 'GLOBAL IMPACT',
                     desc: 'Leading Industrial Automation',
                     color: 'bg-[#0f172a]'
                   }
@@ -147,7 +147,7 @@ const Inax = () => {
                       </span>
                     </div>
                     <div className='flex-1 bg-white p-6 rounded-xl border border-gray-100 group-hover:shadow-xl transition-all'>
-                      <h3 className='font-black text-[#0f172a] uppercase tracking-widest text-xs mb-1'>
+                      <h3 className='font-black text-[#0f172a] tracking-widest text-xs mb-1'>
                         {item.title}
                       </h3>
                       <p className='text-[10px] text-gray-400 font-bold uppercase tracking-widest'>
@@ -323,8 +323,8 @@ const Inax = () => {
       <section className='py-24 bg-gray-50 w-full'>
         <div className='max-w-7xl mx-auto px-4'>
           <div className='text-center mb-16'>
-            <h1 className='text-4xl font-black text-[#0f172a] uppercase tracking-tighter'>
-              Why Choose <span className='text-red-700'>i-NAX™</span>
+            <h1 className='text-4xl font-black text-[#0f172a]  tracking-tighter'>
+              WHY CHOOSE <span className='text-red-700'>i-NAX™</span>
             </h1>
           </div>
 
@@ -393,9 +393,9 @@ const Inax = () => {
         <div className='max-w-7xl mx-auto px-6'>
           {/* Title Section - Adjusted for Dark Theme */}
           <div className='mb-12 border-l-4 border-red-700 pl-4'>
-            <h2 className='text-3xl md:text-4xl font-black uppercase tracking-tighter text-white'>
-              Why Manufacturers{' '}
-              <span className='text-red-700'>Trust I-NAX™</span>
+            <h2 className='text-3xl md:text-4xl font-black  tracking-tighter text-white'>
+              WHY MANUFACTURES{' '}  
+              <span className='text-red-700'>TRUST i-NAX™</span>
             </h2>
             <p className='text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1'>
               The Gold Standard in Precision Engineering

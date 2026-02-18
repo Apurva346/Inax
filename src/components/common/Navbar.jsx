@@ -8,15 +8,15 @@ const Navbar = () => {
   const [mobileMachinesOpen, setMobileMachinesOpen] = useState(false)
 
   const fabrication = [
-    'Multi Spindle Router Machine', 'Modern I-NAX CNC Lathe Machine',
-    'I-NAX Vertical machine center', 'i-NAX Open Body Laser Cutting Machine',
-    'i-NAX Closed Body Laser Cutting Machine', 'I-NAX Radial drilling machine',
-    'I-NAX Milling machine', 'I-NAX Laser marking workstation design',
-    'I-NAX Industrial press brake machine', 'I-NAX CNC Router with controller',
-    'I-NAX CNC Router precision machinery', 'I-NAX CNC Router machine setup',
-    'I-NAX CNC Milling machine showcase', 'I-KRAFT CNC Router System',
+    'Multi Spindle Router Machine', 'Modern i-NAX CNC Lathe Machine',
+    'i-NAX Vertical machine center', 'i-NAX Open Body Laser Cutting Machine',
+    'i-NAX Closed Body Laser Cutting Machine', 'i-NAX Radial drilling machine',
+    'i-NAX Milling machine', 'i-NAX Laser marking workstation design',
+    'i-NAX Industrial press brake machine', 'i-NAX CNC Router with controller',
+    'i-NAX CNC Router precision machinery', 'i-NAX CNC Router machine setup',
+    'i-NAX CNC Milling machine showcase', 'I-KRAFT CNC Router System',
     'I-KRAFT 5-axis CNC Router & control', 'I-KRAFT 3D statue maker machine',
-    'I-NAX Metal Lathe Machine'
+    'i-NAX Metal Lathe Machine'
   ].map(name => ({
     name,
     link: `/machine/${name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`
@@ -38,19 +38,19 @@ const Navbar = () => {
               <img
                 src="/images/logo-removebg-preview.png"
                 alt="I-NAX Precision"
-                className="h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-lg"
+                className="h-26 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-lg"
               />
             </Link>
 
             {/* DESKTOP MENU */}
             <div className="hidden lg:flex gap-12 items-center">
-              <NavLink to="/" label="Home" />
+              <NavLink to="/" label="HOME" />
               <div className="relative group py-6">
                 <DropdownMenu title="Machines" items={fabrication} />
               </div>
               <NavLink to="/all-machines" label="i-NAX" />
-              <NavLink to="/about" label="About i-NAX" />
-              <NavLink to="/why-choose-us" label="Why Choose i-NAX" />
+              <NavLink to="/about" label="ABOUT i-NAX" />
+              <NavLink to="/why-choose-us" label="WHY CHOOSE i-NAX" />
             </div>
 
             {/* RIGHT */}
@@ -87,7 +87,7 @@ const Navbar = () => {
                 <div>
                   <button
                     onClick={() => setMobileMachinesOpen(!mobileMachinesOpen)}
-                    className="flex items-center justify-between w-full font-semibold p-4 uppercase text-[12px] text-white hover:bg-white/10 rounded-lg"
+                    className="flex items-center justify-between w-full font-semibold p-4 text-[12px] text-white hover:bg-white/10 rounded-lg"
                   >
                     Machines
                     {mobileMachinesOpen ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
@@ -135,7 +135,7 @@ const NavLink = ({ to, label }) => (
     to={to}
     className="
       relative text-[#111827]
-       hover:text-[#dc2626] font-semibold uppercase text-[12px]
+       hover:text-[#dc2626] font-semibold  text-[12px]
       tracking-[0.12em] py-2
       after:absolute after:left-0 after:bottom-0
       after:h-[2px] after:w-0 after:bg-white
