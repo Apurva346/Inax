@@ -5,7 +5,7 @@ import React from 'react';
 
 const WhatsAppFloat = () => {
   const phoneNumber = "919960846786";
-  const message = "Hello MECHCHEM, I am interested in your industrial machines.";
+  const message = "Hello i-NAX™, I am interested in your industrial machines.";
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -14,7 +14,7 @@ const WhatsAppFloat = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-4 bg-[#25D366] rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
+      className="fixed bottom-16 right-6 z-50 flex items-center gap-3 px-5 py-4 bg-[#25D366] rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
       aria-label="Chat on WhatsApp"
     >
       {/* WhatsApp LOGO (same as before, just bigger) */}

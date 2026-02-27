@@ -20,7 +20,7 @@ const Inax = () => {
         {/* Background Image with Screen-accurate Overlay */}
         <div className='absolute inset-0 z-0 w-full h-full'>
           <img
-            src='/images/Closeup of CNC turning machine.webp'
+            src='/himages/image3.png'
             className='w-full h-full object-cover opacity-60'
             alt='Modern Industrial CNC'
           />
@@ -36,8 +36,8 @@ const Inax = () => {
           </h1>
 
           <p className='text-lg md:text-xl text-gray-200 max-w-xl mb-10 font-light leading-relaxed'>
-            Advanced CNC & Precision Industrial Machinery <br />
-            designed for Modern Manufacturing.
+            Precision Fiber Laser Cutting Machines <br />
+            High-Speed, intelligent laser solutions for modern manufacturing.
           </p>
 
           {/* Buttons - Yellow & White combination from screenshot */}
@@ -220,7 +220,7 @@ const Inax = () => {
             <div className='flex-1 relative order-1 lg:order-2'>
               <div className='relative p-4 border border-white/10 rounded-3xl'>
                 <img
-                  src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80'
+                  src='/himages/image1.jpeg'
                   alt='i-NAX Machine Design'
                   className='w-full h-[500px] object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700'
                 />
@@ -353,7 +353,7 @@ const Inax = () => {
             <div className='flex-1 relative flex justify-center'>
               <div className='relative w-80 h-80 md:w-96 md:h-96 bg-[#0f172a] rounded-full p-2 shadow-2xl overflow-hidden group'>
                 <img
-                  src='/images/Whychooseinax.jfif'
+                  src='/himages/image2.png'
                   className='w-full h-full object-cover rounded-full opacity-60 group-hover:scale-110 transition-all duration-700'
                   alt='i-NAX Machine'
                 />
