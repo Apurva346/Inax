@@ -8,9 +8,10 @@ import {
   Cpu,
   Layout,
   CheckCircle,
-  Globe
+  Globe, Handshake
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { machinesData } from '../data/machinesData'
 
 const Inax = () => {
   return (
@@ -59,7 +60,7 @@ const Inax = () => {
         </div>
       </section>
       {/* SECTION 2: OUR STORY - Professional & Clean */}
-      <section className='py-24 bg-white w-full overflow-hidden border-b border-gray-100'>
+      <section className='py-12 bg-white w-full overflow-hidden border-b border-gray-100'>
         <div className='max-w-7xl mx-auto px-4'>
           <div className='flex flex-col lg:flex-row gap-20 items-center'>
             <div className='flex-1 space-y-8'>
@@ -162,9 +163,8 @@ const Inax = () => {
         </div>
       </section>
       {/* SECTION 3: WHO WE ARE - Content Rich */}
-      
-      
-      <section className='py-24 bg-[#0f172a] text-white w-full overflow-hidden'>
+
+      <section className='py-12 bg-[#0f172a] text-white w-full overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4'>
           <div className='flex flex-col lg:flex-row items-center gap-20'>
             <div className='flex-1 text-left order-2 lg:order-1'>
@@ -235,7 +235,7 @@ const Inax = () => {
         </div>
       </section>
       {/* SECTION 4: WHAT MAKES US DIFFERENT */}
-      <section className='py-24 bg-gray-50 overflow-hidden'>
+      <section className='py-12 bg-gray-50 overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 text-center'>
           <h2 className='text-4xl font-black text-[#0f172a] uppercase tracking-tighter mb-16'>
             What Makes Us <span className='text-red-700'>Different</span>
@@ -265,122 +265,270 @@ const Inax = () => {
         </div>
       </section>
       {/* SECTION 5: PRODUCT RANGE */}
-      <section className='py-24 bg-white'>
+
+      <section className='py-12 bg-slate-50'>
         <div className='max-w-7xl mx-auto px-4'>
-          <div className='flex justify-between items-end mb-16'>
+          {/* Header Section */}
+          <div className='flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4'>
             <div className='text-left'>
-              <h2 className='text-4xl font-black uppercase tracking-tighter text-[#0f172a]'>
+              <span className='text-red-700 font-bold tracking-[0.2em] uppercase text-sm'>
+                Our Collection
+              </span>
+              <h2 className='text-5xl font-black uppercase tracking-tighter text-[#0f172a] mt-2'>
                 Product Range
               </h2>
-              <div className='w-24 h-1 bg-red-700 mt-2'></div>
+              <div className='w-20 h-1.5 bg-red-700 mt-4'></div>
             </div>
-            <Link to='/all-machines' onClick={() => window.scrollTo(0, 0)}>
-              <button className='text-xs font-black uppercase tracking-widest text-red-700 flex items-center gap-2 hover:gap-4 transition-all'>
-                View All <ArrowRight size={16} />
+
+            <Link
+              to='/all-machines'
+              onClick={() => window.scrollTo(0, 0)}
+              className='group'
+            >
+              <button className='px-6 py-3 border-2 border-red-700 text-red-700 text-xs font-black uppercase tracking-widest flex items-center gap-3 hover:bg-red-700 hover:text-white transition-all duration-300 rounded-full'>
+                View All Machines{' '}
+                <ArrowRight
+                  size={18}
+                  className='group-hover:translate-x-1 transition-transform'
+                />
               </button>
             </Link>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            {[
-              {
-                title: 'CNC Machines',
-                img: '/images/I-NAX CNC Milling Machine Showcase.png'
-              },
-              {
-                title: 'Lathe Machines',
-                img: '/images/I-NAX Metal Lathe in Detail.png'
-              },
-              {
-                title: 'Precision Units',
-                img: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600'
-              },
-              {
-                title: 'Support Services',
-                img: '/images/Contactusimage.jfif'
-              }
-            ].map((product, i) => (
-              <div key={i} className='group cursor-pointer'>
-                <div className='relative h-80 overflow-hidden rounded-2xl mb-6'>
-                  <img
-                    src={product.img}
-                    className='w-full h-full  group-hover:scale-110 transition-transform duration-700'
-                  />
-                  <div className='absolute inset-0 bg-black/20 group-hover:bg-red-700/40 transition-all'></div>
+          {/* Product Grid - Mapping from machinesData */}
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10'>
+            {machinesData &&
+              machinesData.slice(0, 4).map(machine => (
+                <div
+                  key={machine.id}
+                  className='group bg-white rounded-3xl p-4 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full border border-slate-100'
+                >
+                  {/* Image Container */}
+                  <div className='relative h-64 overflow-hidden rounded-2xl bg-slate-100 mb-6'>
+                    <img
+                      src={machine.image}
+                      alt={machine.name}
+                      className='w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 p-4'
+                    />
+                    <div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6'>
+                      <span className='text-white text-[10px] font-bold uppercase tracking-widest'>
+                        i-NAX™ Series
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className='px-2 flex flex-col flex-grow'>
+                    <h3 className='text-lg font-bold leading-tight text-[#0f172a] group-hover:text-red-700 transition-colors'>
+                      {machine.name}
+                    </h3>
+                    <p className='text-sm text-gray-500 mt-3 line-clamp-3'>
+                      {machine.description}
+                    </p>
+
+                    <div className='mt-auto pt-6'>
+                      {/* Dynamic Route Path using machine.id */}
+                      <Link
+                        to={`/machine/${machine.id}`}
+                        onClick={() => window.scrollTo(0, 0)}
+                      >
+                        <button className='w-full py-3 bg-slate-900 text-white text-[11px] font-bold uppercase tracking-widest rounded-xl hover:bg-red-700 transition-colors duration-300'>
+                          View Details
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                <h3 className='text-sm font-black uppercase tracking-widest text-[#0f172a]'>
-                  {product.title}
-                </h3>
-                <p className='text-[10px] font-bold text-gray-400 uppercase mt-1'>
-                  High-Precision Engineering
-                </p>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
-      {/* SECTION 6: WHY CHOOSE I-NAX (Modern Diagram Style) */}
-      <section className='py-24 bg-gray-50 w-full'>
-        <div className='max-w-7xl mx-auto px-4'>
-          <div className='text-center mb-16'>
-            <h1 className='text-4xl font-black text-[#0f172a]  tracking-tighter'>
-              WHY CHOOSE <span className='text-red-700'>i-NAX™</span>
-            </h1>
+
+      <section className='relative min-h-[450px] flex items-center justify-center overflow-hidden py-16'>
+        {/* Background Image with Dark Industrial Overlay */}
+        <div
+          className='absolute inset-0 z-0 bg-cover bg-center'
+          style={{
+            backgroundImage: "url('/images/Closeup of CNC turning machine.webp')" // तुमची इमेज पाथ इथे द्या
+          }}
+        >
+          {/* मूळ इमेजसारखा निळसर-काळा ओव्हरले */}
+          <div className='absolute inset-0 bg-slate-950/85 backdrop-blur-[1px]'></div>
+        </div>
+
+        <div className='max-w-7xl mx-auto px-6 relative z-10 w-full text-center'>
+          {/* Top Tagline */}
+          <div className='mb-16'>
+            <h2 className='text-2xl md:text-4xl font-bold text-white tracking-tight'>
+              Trusted Engineering. Proven Performance.
+            </h2>
+            <div className='h-0.5 w-40 bg-red-700 mx-auto mt-4 shadow-[0_0_15px_rgba(185,28,28,0.5)]'></div>
           </div>
 
-          <div className='flex flex-col lg:flex-row items-center gap-12'>
-            <div className='flex-1 space-y-4'>
+          {/* Stats Grid - Glassmorphism Effect */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-y border-white/10 bg-white/[0.03] backdrop-blur-md'>
+            {/* 1. Years Experience */}
+            <div className='p-10 flex flex-col items-center justify-center border-white/5 lg:border-r group hover:bg-white/5 transition-colors'>
+              <span className='text-5xl font-black text-white mb-2 tracking-tighter group-hover:scale-105 transition-transform'>
+                10+
+              </span>
+              <h3 className='text-[13px] font-black uppercase tracking-widest text-white leading-tight mb-2'>
+                Years Engineering Experience
+              </h3>
+              <p className='text-[11px] italic font-medium text-gray-400 tracking-wider'>
+                A Decade of Excellence
+              </p>
+            </div>
+
+            {/* 2. Installations */}
+            <div className='p-10 flex flex-col items-center justify-center border-white/5 md:border-r group hover:bg-white/5 transition-colors'>
+              <span className='text-5xl font-black text-white mb-2 tracking-tighter group-hover:scale-105 transition-transform'>
+                500+
+              </span>
+              <h3 className='text-[13px] font-black uppercase tracking-widest text-white leading-tight mb-2'>
+                Installations Worldwide
+              </h3>
+              <p className='text-[11px] italic font-medium text-gray-400 tracking-wider'>
+                Across Diverse Industries
+              </p>
+            </div>
+
+            {/* 3. After-Sales Support */}
+            <div className='p-10 flex flex-col items-center justify-center border-white/5 lg:border-r group hover:bg-white/5 transition-colors'>
+              <div className='mb-3 text-gray-300 group-hover:scale-110 transition-transform duration-300'>
+                <Settings size={48} strokeWidth={1.5} />
+              </div>
+              <h3 className='text-[13px] font-black uppercase tracking-widest text-white leading-tight mb-2'>
+                Reliable After-Sales Support
+              </h3>
+              <p className='text-[11px] italic font-medium text-gray-400 tracking-wider'>
+                Committed Service & Care
+              </p>
+            </div>
+
+            {/* 4. Manufacturing Partner */}
+            <div className='p-10 flex flex-col items-center justify-center group hover:bg-white/5 transition-colors'>
+              <div className='mb-3 text-gray-300 group-hover:scale-110 transition-transform duration-300'>
+                <Handshake size={48} strokeWidth={1.5} />
+              </div>
+              <h3 className='text-[13px] font-black uppercase tracking-widest text-white leading-tight mb-2'>
+                Trusted Manufacturing Partner
+              </h3>
+              <p className='text-[11px] italic font-medium text-gray-400 tracking-wider'>
+                Your Success, Our Mission
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6: WHY CHOOSE I-NAX (Modern Diagram Style) */}
+
+      <section className='py-12 bg-[#f8fafc] w-full overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4'>
+          {/* Section Header */}
+          <div className='text-center mb-20'>
+            <span className='text-red-700 font-bold tracking-[0.3em] uppercase text-xs'>
+              Innovation Excellence
+            </span>
+            <h2 className='text-5xl md:text-6xl font-black text-[#0f172a] tracking-tighter mt-3'>
+              WHY CHOOSE <span className='text-red-700'>i-NAX™</span>
+            </h2>
+            <div className='w-24 h-1.5 bg-red-700 mx-auto mt-6 rounded-full'></div>
+          </div>
+
+          <div className='flex flex-col lg:flex-row items-center gap-16 relative'>
+            {/* Left Side Features */}
+            <div className='flex-1 w-full space-y-6 z-10'>
               {[
-                'Built for Performance',
-                'Precision Engineering',
-                'Industrial Build Quality',
-                'Modern CNC Tech'
-              ].map((title, idx) => (
+                {
+                  title: 'Built for Performance',
+                  des: 'Engineered for high-speed industrial output.'
+                },
+                {
+                  title: 'Precision Engineering',
+                  des: 'Micron-level accuracy in every cut and turn.'
+                },
+                {
+                  title: 'Industrial Build Quality',
+                  des: 'Heavy-duty chassis for 24/7 operations.'
+                },
+                {
+                  title: 'Modern CNC Tech',
+                  des: 'Smart software integration for easy control.'
+                }
+              ].map((item, idx) => (
                 <div
                   key={idx}
-                  className='p-6 bg-white rounded-xl border-r-4 border-transparent hover:border-red-700 shadow-sm transition-all text-right group'
+                  className='p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-right group relative overflow-hidden'
                 >
-                  <h3 className='font-black text-[#0f172a] uppercase text-xs mb-1 group-hover:text-red-700 transition-colors'>
-                    {title}
+                  <div className='absolute right-0 top-0 h-full w-1.5 bg-red-700 transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300'></div>
+                  <h3 className='font-black text-[#0f172a] uppercase text-sm mb-2 group-hover:text-red-700 transition-colors'>
+                    {item.title}
                   </h3>
-                  <p className='text-[10px] text-gray-400 uppercase font-bold tracking-tighter'>
-                    Maximum stability & High repeatability
+                  <p className='text-xs text-gray-500 font-medium leading-relaxed'>
+                    {item.des}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className='flex-1 relative flex justify-center'>
-              <div className='relative w-80 h-80 md:w-96 md:h-96 bg-[#0f172a] rounded-full p-2 shadow-2xl overflow-hidden group'>
-                <img
-                  src='/himages/image2.png'
-                  className='w-full h-full object-cover rounded-full opacity-60 group-hover:scale-110 transition-all duration-700'
-                  alt='i-NAX Machine'
-                />
-                <div className='absolute inset-0 flex items-center justify-center'>
-                  <span className='text-white font-black text-4xl italic tracking-tighter opacity-20'>
-                    i-NAX™
+            {/* Center Image with Decorative Rings */}
+            <div className='flex-1 relative flex justify-center items-center'>
+              {/* Animated Background Rings */}
+              <div className='absolute w-[120%] h-[120%] border border-red-100 rounded-full animate-[spin_20s_linear_infinite] opacity-50'></div>
+              <div className='absolute w-[140%] h-[140%] border border-slate-200 rounded-full animate-[spin_30s_linear_infinite_reverse] opacity-30'></div>
+
+              <div className='relative z-20 w-80 h-80 md:w-[450px] md:h-[450px]'>
+                <div className='absolute inset-0 bg-red-700 rounded-full rotate-6 group-hover:rotate-12 transition-transform duration-700'></div>
+                <div className='absolute inset-0 bg-[#0f172a] rounded-full overflow-hidden border-8 border-white shadow-2xl'>
+                  <img
+                    src='/himages/image2.png'
+                    className='w-full h-full object-cover opacity-80 hover:scale-110 hover:opacity-100 transition-all duration-700'
+                    alt='i-NAX Machine'
+                  />
+                  <div className='absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-60'></div>
+                </div>
+
+                {/* Floating Badge */}
+                <div className='absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-8 py-3 rounded-full shadow-xl border border-slate-100'>
+                  <span className='text-[#0f172a] font-black text-xl italic tracking-tighter'>
+                    i-NAX<span className='text-red-700'>™</span>
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className='flex-1 space-y-4 text-left'>
+            {/* Right Side Features */}
+            <div className='flex-1 w-full space-y-6 z-10'>
               {[
-                'Trusted Expertise',
-                'Application-Focused',
-                'Reliable Service',
-                'Long-Term Value'
-              ].map((title, idx) => (
+                {
+                  title: 'Trusted Expertise',
+                  des: 'Decades of experience in machine manufacturing.'
+                },
+                {
+                  title: 'Application-Focused',
+                  des: 'Customized solutions for your specific industry.'
+                },
+                {
+                  title: 'Reliable Service',
+                  des: 'Pan-India support with rapid response time.'
+                },
+                {
+                  title: 'Long-Term Value',
+                  des: 'Low maintenance cost with high resale value.'
+                }
+              ].map((item, idx) => (
                 <div
                   key={idx}
-                  className='p-6 bg-white rounded-xl border-l-4 border-transparent hover:border-[#1e3a8a] shadow-sm transition-all group'
+                  className='p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group relative overflow-hidden'
                 >
-                  <h3 className='font-black text-[#0f172a] uppercase text-xs mb-1 group-hover:text-[#1e3a8a] transition-colors'>
-                    {title}
+                  <div className='absolute left-0 top-0 h-full w-1.5 bg-[#0f172a] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300'></div>
+                  <h3 className='font-black text-[#0f172a] uppercase text-sm mb-2 group-hover:text-blue-800 transition-colors'>
+                    {item.title}
                   </h3>
-                  <p className='text-[10px] text-gray-400 uppercase font-bold tracking-tighter'>
-                    Reliable support & Industry insight
+                  <p className='text-xs text-gray-500 font-medium leading-relaxed'>
+                    {item.des}
                   </p>
                 </div>
               ))}
@@ -394,7 +542,7 @@ const Inax = () => {
           {/* Title Section - Adjusted for Dark Theme */}
           <div className='mb-12 border-l-4 border-red-700 pl-4'>
             <h2 className='text-3xl md:text-4xl font-black  tracking-tighter text-white'>
-              WHY MANUFACTURES{' '}  
+              WHY MANUFACTURES{' '}
               <span className='text-red-700'>TRUST i-NAX™</span>
             </h2>
             <p className='text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1'>
@@ -476,7 +624,7 @@ const Inax = () => {
         </div>
       </section>
       {/* SECTION 8: SERVICES - Integrated Hub */}
-      <section className='py-20 bg-white w-full'>
+      <section className='py-10 bg-white w-full'>
         <div className='max-w-7xl mx-auto px-6'>
           {/* Compact Header */}
           <div className='mb-12 border-l-4 border-red-700 pl-4'>
