@@ -323,7 +323,7 @@ const Inax = () => {
                       {machine.name}
                     </h3>
                     <p className='text-sm text-gray-500 mt-3 line-clamp-3'>
-                      {machine.description}
+                      {machine.des}
                     </p>
 
                     <div className='mt-auto pt-6'>

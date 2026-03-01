@@ -222,9 +222,9 @@ const Footer = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About i-NAX', path: '/about' },
-    { name: 'i-NAX Brand', path: '/all-machines' },
-    { name: 'Why Choose i-NAX', path: '/why-choose-us' },
+    { name: 'About i-NAX™', path: '/about' },
+    { name: 'i-NAX™ Brand', path: '/all-machines' },
+    { name: 'Why Choose i-NAX™', path: '/why-choose-us' },
     { name: 'Contact Us', path: '/contact' }
   ];
 
@@ -277,7 +277,7 @@ const Footer = () => {
               <div className="flex items-start gap-4 border-t border-white/5 pt-4">
                 <MapPin size={20} className="text-red-700 shrink-0 mt-1" />
                 <span className="text-[12px] text-gray-300 leading-snug">
-                  <span className="text-red-500 font-bold block mb-1">New Experience Center:</span>
+                  <span className="text-red-500 font-bold block mb-1">New i-NAX™ Experience Center coming soon at:</span>
                   Plot No.11 NASA Ground, Nehru Nagar, Nagpur - 440015
                 </span>
               </div>

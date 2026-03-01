@@ -1,85 +1,92 @@
 export const machinesData = [
-    // Machining
-    {
-  id: 'multi-spindle-router-machine',
-  name: 'Multi Spindle Router Machine',
-  description: 'High-efficiency woodworking and composite processing with multiple spindles for simultaneous mass production.',
-  longDescription: `
+  // Machining
+  {
+    id: 'i-nax-closed-body-laser-cutting-machine',
+    name: 'i-NAX™ Closed Body Laser Cutting Machine',
+    des: 'High-speed metal cutting with superior precision and low operating cost. Ideal for sheet metal fabrication and industrial production.',
+    description: 'Advanced enclosed fiber laser solution for high-precision, high-speed, and safe metal processing.',
+    longDescription: `
     <h3>Overview</h3>
-    <p>The Multi-Spindle Router Machine is designed for high-efficiency woodworking, plastic, and composite material processing. With multiple spindles working simultaneously, this machine significantly reduces production time while maintaining precision and quality.</p>
-    <p>Ideal for industrial applications requiring repetitive cutting, drilling, and shaping operations, it ensures consistent performance and superior output for high-volume manufacturing.</p>
+    <p>The i-NAX Closed Body Laser Cutting Machine is an advanced enclosed fiber laser cutting machine designed for high-precision, high-speed, and safe metal processing. Its fully enclosed structure ensures operator safety, fume control, and stable cutting performance, making it ideal for modern industrial production environments.</p>
+    <p>Built for accuracy and productivity, this fiber laser cutting machine for sheet metal delivers clean, burr-free cuts with excellent edge quality. The closed body design minimizes laser radiation exposure while maintaining consistent results for continuous manufacturing operations.</p>
 
-    <h3>Key Features</h3>
-    <p>✔ <strong>Multiple Spindles:</strong> Allows simultaneous routing on several points, vastly increasing productivity.<br/>
-    ✔ <strong>High Precision:</strong> Equipped with advanced CNC control for accurate cutting and repeatable shaping.<br/>
-    ✔ <strong>Robust Construction:</strong> Heavy-duty frame ensures stability and vibration-free high-speed operations.<br/>
-    ✔ <strong>Versatile Operations:</strong> Suitable for wood, MDF, acrylic, PVC, and composite materials.<br/>
-    ✔ <strong>User-Friendly Interface:</strong> Easy-to-operate control panel with digital display for quick setup.<br/>
-    ✔ <strong>Automatic Tool Change (Optional):</strong> Further reduces downtime and enhances process efficiency.<br/>
-    ✔ <strong>Energy Efficient:</strong> Optimized motor design reduces power consumption during heavy runs.</p>
+    <h3>Key Features of i-NAX Closed Body Fiber Laser Machine</h3>
+    <p>• Fully enclosed laser cutting machine for industrial safety<br/>
+    • High-power fiber laser source for precision cutting<br/>
+    • Automatic safety doors with interlock system<br/>
+    • High-speed CNC laser cutting controller<br/>
+    • Efficient dust & fume extraction system<br/>
+    • Stable machine bed for vibration-free cutting<br/>
+    • Low operating cost and minimal maintenance<br/>
+    • Suitable for 24/7 industrial laser cutting applications</p>
 
-    
+    <h3>Laser Cutting Applications</h3>
+    <p>🔹 <strong>Sheet metal fabrication industry</strong><br/>
+    🔹 <strong>Automotive laser cutting components</strong><br/>
+    🔹 <strong>Stainless steel fabrication units</strong><br/>
+    🔹 <strong>Electrical panel & control cabinet manufacturing</strong><br/>
+    🔹 <strong>Metal signage and decorative laser cutting</strong><br/>
+    🔹 <strong>Industrial machine parts and enclosures</strong></p>
 
-    <h3>Applications</h3>
-    <p>The Multi-Spindle Router is the perfect choice for:</p>
-    <p>🔹 Mass production of wooden furniture components<br/>
-    🔹 Door and window frame manufacturing<br/>
-    🔹 Panel processing for cabinetry and interior décor<br/>
-    🔹 CNC cutting and drilling for plastic and composite materials<br/>
-    🔹 Large-scale production of moldings, trims, and decorative woodwork</p>
+    <h3>Materials Supported</h3>
+    <p>✔ Mild Steel (MS)<br/>
+    ✔ Stainless Steel (SS)<br/>
+    ✔ Aluminum sheets<br/>
+    ✔ Brass & Copper<br/>
+    ✔ Galvanized steel</p>
 
-    <h3>Technical Specifications</h3>
-    <table class="spec-table">
-      <thead>
-        <tr><th>Feature</th><th>Specification</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Number of Spindles</td><td>3 / 4 / 6 (depending on model)</td></tr>
-        <tr><td>Spindle Power</td><td>3 HP – 5 HP per spindle</td></tr>
-        <tr><td>Speed Range</td><td>5000 – 24,000 RPM</td></tr>
-        <tr><td>Table Size</td><td>1200 x 600 mm (customizable)</td></tr>
-        <tr><td>Control System</td><td>CNC / PLC</td></tr>
-        <tr><td>Power Supply</td><td>380V, 3 Phase</td></tr>
-        <tr><td>Machine Dimensions</td><td>2500 x 1800 x 1600 mm</td></tr>
-        <tr><td>Weight</td><td>1200 – 2000 kg</td></tr>
-        <tr><td>Cooling System</td><td>Air / Water-cooled spindle options</td></tr>
-      </tbody>
-    </table>
+    <h3>Why Choose i-NAX Closed Body Laser Cutting Machine?</h3>
+    <p>The i-NAX fiber laser cutting machine is engineered for manufacturers who demand precision, safety, and long-term reliability. With its robust enclosed design and advanced CNC control, i-NAX ensures higher productivity, reduced material waste, and consistent cutting accuracy—making it a trusted solution for Indian and global industries.</p>
 
-    <h3>FAQ</h3>
+    <h3>Safety & Environmental Advantages</h3>
+    <p>• Complete laser beam enclosure<br/>
+    • Reduced noise and dust levels<br/>
+    • Clean and controlled cutting environment<br/>
+    • Complies with industrial laser safety standards</p>
+
+    <h3>Frequently Asked Questions – i-NAX Closed Body Laser Cutting Machine</h3>
     <div class="faq-box">
-      <p><strong>Q1: What materials can the Multi-Spindle Router Machine process?</strong><br/>
-      A: It can efficiently handle wood, MDF, plywood, acrylic, PVC, and various industrial composite materials.</p>
+      <p><strong>1. What is a closed body laser cutting machine?</strong><br/>
+      A closed body laser cutting machine is an enclosed fiber laser system designed to improve operator safety, reduce dust and noise, and provide stable, high-precision metal cutting in industrial environments.</p>
     </div>
-
     <div class="faq-box">
-      <p><strong>Q2: How many spindles does the machine have?</strong><br/>
-      A: Depending on your production requirement and the specific model, it can be equipped with 3, 4, or 6 spindles working simultaneously.</p>
+      <p><strong>2. What are the advantages of an enclosed fiber laser cutting machine?</strong><br/>
+      An enclosed fiber laser cutting machine offers enhanced safety, better fume control, improved cutting accuracy, and a cleaner workspace compared to open laser machines.</p>
     </div>
-
     <div class="faq-box">
-      <p><strong>Q3: Is the machine suitable for small-scale production?</strong><br/>
-      A: Yes, while it excels at mass production, its precision and ease of setup make it highly efficient for both small and large-scale industrial projects.</p>
+      <p><strong>3. Which materials can be cut using the i-NAX closed body laser machine?</strong><br/>
+      The i-NAX closed body laser cutting machine can cut mild steel, stainless steel, aluminum, brass, copper, and galvanized sheets with high precision and smooth edge quality.</p>
     </div>
-
     <div class="faq-box">
-      <p><strong>Q4: Does it support CNC programming?</strong><br/>
-      A: Yes, it comes integrated with an advanced CNC or PLC control system to ensure precise automation and compatibility with standard design files.</p>
+      <p><strong>4. Is the i-NAX laser cutting machine suitable for sheet metal fabrication?</strong><br/>
+      Yes, the i-NAX fiber laser cutting machine for sheet metal is ideal for fabrication units, offering fast cutting speeds, consistent accuracy, and low operating costs.</p>
     </div>
-
     <div class="faq-box">
-      <p><strong>Q5: Is the machine customizable for specific production needs?</strong><br/>
-      A: Absolutely. We offer customization for the table size, spindle count, and motor power to align with your specific manufacturing goals.</p>
+      <p><strong>5. Does the closed body design improve operator safety?</strong><br/>
+      Yes. The fully enclosed structure prevents laser radiation exposure and includes safety interlock doors, ensuring compliance with industrial laser safety standards.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>6. What industries use closed body CNC laser cutting machines?</strong><br/>
+      These machines are widely used in sheet metal fabrication, automotive, electrical panel manufacturing, stainless steel fabrication, signage, and industrial machinery production.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>7. Is the i-NAX closed body laser cutting machine energy efficient?</strong><br/>
+      Yes, the fiber laser source used in i-NAX machines is energy efficient, requires minimal maintenance, and reduces long-term operational costs.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>8. Can the machine operate continuously for industrial production?</strong><br/>
+      Absolutely. The i-NAX enclosed CNC laser cutting machine is designed for 24/7 industrial operation, ensuring stable performance and high productivity.</p>
     </div>
   `,
-  specs: ['Spindles: 3/4/6 Heads', 'Application: Mass Production'],
-  image: '/images/Multi-Spindle Router Machine Display.png'
-},
-    {
-        id: 'modern-i-nax-cnc-lathe-machine',
-        name: 'Modern I-NAX CNC Lathe Machine',
-        description: 'Heavy duty lathe for metal turning.',
-        longDescription: `
+    specs: ['Enclosure: Fully Automated Safety Doors', 'Application: 24/7 Industrial Use'],
+    image: '/images/closed body laser.png'
+  },
+  {
+    id: 'modern-i-nax-cnc-lathe-machine',
+    des:'Reliable turning solutions for precision components, shafts, and industrial machining applications.',
+    name: 'Modern i-NAX™ CNC Lathe Machine',
+    description: 'Heavy duty lathe for metal turning.',
+    longDescription: `
     <h3>Overview</h3>
     <p>The i‑NAX CNC Lathe Machine is a state‑of‑the‑art precision turning center engineered for modern manufacturing environments. Designed to deliver high performance, repeatability, and flexibility, the i‑NAX series is ideal for machining cylindrical parts with exacting tolerances in automotive, aerospace, oil & gas, general engineering and high‑mix production environments.</p>
     <p>With advanced CNC control and rugged mechanical construction, i‑NAX CNC lathes significantly outperform traditional manual lathes in speed, accuracy, and consistency — making them essential for high‑volume production and precision part manufacturing.</p>
@@ -153,185 +160,15 @@ export const machinesData = [
       <p><strong>Q8: Does it support automation?</strong><br/>A: Yes, it can be equipped with bar feeders and automatic tool changers for lights-out machining.</p>
     </div>
   `,
-        specs: ['Bed: 1000mm', 'Motor: 5HP'],
-        image: '/images/Modern I-NAX CNC Lathe Machine.png'
-    },
-    {
-  id: 'i-nax-open-body-laser-cutting-machine',
-  name: 'i-NAX Open Body Laser Cutting Machine',
-  description: 'High-efficiency woodworking and composite processing with multiple spindles for simultaneous mass production.',
-  longDescription: `
-    <h3>Overview</h3>
-    <p>The i-NAX Open Body Laser Cutting Machine is a high-performance CNC fiber laser metal cutting machine designed for fast, precise, and reliable sheet metal processing. With its open structure design, this machine allows easy material handling and smooth workflow, making it an ideal solution for modern fabrication units and industrial manufacturers.</p>
-    <p>Engineered with advanced fiber laser technology, the i-NAX open body laser machine delivers superior cutting accuracy, smooth edges, and consistent results across a wide range of metal thicknesses. Its rigid frame construction ensures vibration-free operation, long machine life, and stable cutting performance even during continuous production.</p>
-
-    <h3>High-Precision CNC Fiber Laser Metal Cutting Machine</h3>
-    <p>The i-NAX open body model operates as a fully automated CNC laser cutting machine, ensuring repeatable accuracy and high cutting speed. This fiber laser metal cutting machine is suitable for processing mild steel, stainless steel, aluminum, brass, and copper with excellent edge quality and minimal material waste.</p>
-    <p>The intelligent CNC control system allows easy programming, precise nesting, and efficient production management, reducing operator dependency and improving overall productivity.</p>
-
-    <h3>Open Body Laser Machine Size Options</h3>
-    <p>The open body laser machine size can be selected based on your production requirements. i-NAX offers multiple cutting bed configurations suitable for small, medium, and large fabrication units. Common size options include:</p>
-    <p>• 3000 × 1500 mm<br/>
-    • 4000 × 2000 mm<br/>
-    • 6000 × 2000 mm<br/>
-    <small>(Custom sizes available on request)</small></p>
-
-    <h3>Open Body Laser Cutter with Pallet Changer</h3>
-    <p>For high-volume operations, i-NAX also offers an Open Body Laser Cutter with Pallet Changer. This metal sheet laser cutting machine with pallet enables simultaneous cutting and sheet loading, significantly reducing idle time and increasing output. It is an ideal choice for industries focused on speed, automation, and large-scale production.</p>
-
-    <h3>Open Body Laser Machine Cost & Price</h3>
-    <p>The open body laser machine cost depends on factors such as laser power, machine size, CNC controller, and optional automation features like a pallet changer. The open body laser machine cost price is optimized to deliver maximum value, low operating cost, and long-term reliability.</p>
-    <p>For accurate pricing and configuration details, customers can contact i-NAX – a trusted Fiber Laser Cutting Machine Trader and Manufacturer in India.</p>
-
-    <h3>Applications</h3>
-    <p>The i-NAX Open Body Laser Cutting Machine is widely used in:<br/>
-    🔹 <strong>Sheet metal fabrication</strong><br/>
-    🔹 <strong>Automotive and auto components</strong><br/>
-    🔹 <strong>Electrical panels and enclosures</strong><br/>
-    🔹 <strong>Industrial machinery parts</strong><br/>
-    🔹 <strong>Furniture and decorative metal work</strong></p>
-
-    <h3>Why Choose i-NAX Open Body Laser Cutting Machine?</h3>
-    <p>✔ High-speed fiber laser cutting technology<br/>
-    ✔ Strong open body structure for easy handling<br/>
-    ✔ Accurate CNC control and low maintenance<br/>
-    ✔ Energy-efficient and cost-effective operation<br/>
-    ✔ Reliable service and support across India</p>
-
-    <h3>Frequently Asked Questions – i-NAX Open Body Laser Cutting Machine</h3>
-    <div class="faq-box">
-      <p><strong>1. What is an open body laser cutting machine?</strong><br/>
-      An open body laser cutting machine is a CNC fiber laser system with an open structure that allows easy loading and unloading of metal sheets. It is ideal for fast and flexible sheet metal cutting operations.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>2. What is the open body laser machine cost?</strong><br/>
-      The open body laser machine cost depends on laser power, machine size, CNC controller, and optional features like a pallet changer. For the exact cost price, it is best to contact i-NAX with your cutting requirements.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>3. What sizes are available in i-NAX open body laser machines?</strong><br/>
-      i-NAX open body laser machines are available in multiple sizes such as 3000 × 1500 mm, 4000 × 2000 mm, and 6000 × 2000 mm. Custom machine sizes can also be provided based on application needs.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>4. Which materials can be cut using a fiber laser metal cutting machine?</strong><br/>
-      The i-NAX fiber laser metal cutting machine can cut mild steel (MS), stainless steel (SS), aluminum, brass, and copper with high precision and smooth edge quality.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>5. What is an open body laser cutter with pallet changer?</strong><br/>
-      An open body laser cutter with pallet changer is an automated system that allows cutting on one pallet while loading or unloading material on another, increasing productivity and reducing machine idle time.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>6. Is the i-NAX machine a CNC laser cutting machine?</strong><br/>
-      Yes, the i-NAX open body laser cutting machine is a fully automated CNC laser cutting machine with advanced control software for accurate and repeatable metal cutting.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>7. Which industries use metal sheet laser cutting machines?</strong><br/>
-      Metal sheet laser cutting machines are widely used in sheet metal fabrication, automotive components, electrical panels, industrial machinery, furniture, and decorative metal applications.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>8. Does i-NAX provide installation and after-sales support?</strong><br/>
-      Yes, i-NAX provides professional installation, operator training, and reliable after-sales service support across India.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>9. Why choose i-NAX as a fiber laser cutting machine trader?</strong><br/>
-      i-NAX is a trusted fiber laser cutting machine trader and manufacturer, known for durable machines, competitive pricing, and strong technical support.</p>
-    </div>
-  `,
-  specs: ['Bed Size: Up to 6000x2000 mm', 'Type: Fiber Laser CNC'],
-  image: '/images/laser machine.png' 
-},
-{
-  id: 'i-nax-closed-body-laser-cutting-machine',
-  name: 'i-NAX Closed Body Laser Cutting Machine',
-  description: 'Advanced enclosed fiber laser solution for high-precision, high-speed, and safe metal processing.',
-  longDescription: `
-    <h3>Overview</h3>
-    <p>The i-NAX Closed Body Laser Cutting Machine is an advanced enclosed fiber laser cutting machine designed for high-precision, high-speed, and safe metal processing. Its fully enclosed structure ensures operator safety, fume control, and stable cutting performance, making it ideal for modern industrial production environments.</p>
-    <p>Built for accuracy and productivity, this fiber laser cutting machine for sheet metal delivers clean, burr-free cuts with excellent edge quality. The closed body design minimizes laser radiation exposure while maintaining consistent results for continuous manufacturing operations.</p>
-
-    <h3>Key Features of i-NAX Closed Body Fiber Laser Machine</h3>
-    <p>• Fully enclosed laser cutting machine for industrial safety<br/>
-    • High-power fiber laser source for precision cutting<br/>
-    • Automatic safety doors with interlock system<br/>
-    • High-speed CNC laser cutting controller<br/>
-    • Efficient dust & fume extraction system<br/>
-    • Stable machine bed for vibration-free cutting<br/>
-    • Low operating cost and minimal maintenance<br/>
-    • Suitable for 24/7 industrial laser cutting applications</p>
-
-    <h3>Laser Cutting Applications</h3>
-    <p>🔹 <strong>Sheet metal fabrication industry</strong><br/>
-    🔹 <strong>Automotive laser cutting components</strong><br/>
-    🔹 <strong>Stainless steel fabrication units</strong><br/>
-    🔹 <strong>Electrical panel & control cabinet manufacturing</strong><br/>
-    🔹 <strong>Metal signage and decorative laser cutting</strong><br/>
-    🔹 <strong>Industrial machine parts and enclosures</strong></p>
-
-    <h3>Materials Supported</h3>
-    <p>✔ Mild Steel (MS)<br/>
-    ✔ Stainless Steel (SS)<br/>
-    ✔ Aluminum sheets<br/>
-    ✔ Brass & Copper<br/>
-    ✔ Galvanized steel</p>
-
-    <h3>Why Choose i-NAX Closed Body Laser Cutting Machine?</h3>
-    <p>The i-NAX fiber laser cutting machine is engineered for manufacturers who demand precision, safety, and long-term reliability. With its robust enclosed design and advanced CNC control, i-NAX ensures higher productivity, reduced material waste, and consistent cutting accuracy—making it a trusted solution for Indian and global industries.</p>
-
-    <h3>Safety & Environmental Advantages</h3>
-    <p>• Complete laser beam enclosure<br/>
-    • Reduced noise and dust levels<br/>
-    • Clean and controlled cutting environment<br/>
-    • Complies with industrial laser safety standards</p>
-
-    <h3>Frequently Asked Questions – i-NAX Closed Body Laser Cutting Machine</h3>
-    <div class="faq-box">
-      <p><strong>1. What is a closed body laser cutting machine?</strong><br/>
-      A closed body laser cutting machine is an enclosed fiber laser system designed to improve operator safety, reduce dust and noise, and provide stable, high-precision metal cutting in industrial environments.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>2. What are the advantages of an enclosed fiber laser cutting machine?</strong><br/>
-      An enclosed fiber laser cutting machine offers enhanced safety, better fume control, improved cutting accuracy, and a cleaner workspace compared to open laser machines.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>3. Which materials can be cut using the i-NAX closed body laser machine?</strong><br/>
-      The i-NAX closed body laser cutting machine can cut mild steel, stainless steel, aluminum, brass, copper, and galvanized sheets with high precision and smooth edge quality.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>4. Is the i-NAX laser cutting machine suitable for sheet metal fabrication?</strong><br/>
-      Yes, the i-NAX fiber laser cutting machine for sheet metal is ideal for fabrication units, offering fast cutting speeds, consistent accuracy, and low operating costs.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>5. Does the closed body design improve operator safety?</strong><br/>
-      Yes. The fully enclosed structure prevents laser radiation exposure and includes safety interlock doors, ensuring compliance with industrial laser safety standards.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>6. What industries use closed body CNC laser cutting machines?</strong><br/>
-      These machines are widely used in sheet metal fabrication, automotive, electrical panel manufacturing, stainless steel fabrication, signage, and industrial machinery production.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>7. Is the i-NAX closed body laser cutting machine energy efficient?</strong><br/>
-      Yes, the fiber laser source used in i-NAX machines is energy efficient, requires minimal maintenance, and reduces long-term operational costs.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>8. Can the machine operate continuously for industrial production?</strong><br/>
-      Absolutely. The i-NAX enclosed CNC laser cutting machine is designed for 24/7 industrial operation, ensuring stable performance and high productivity.</p>
-    </div>
-  `,
-  specs: ['Enclosure: Fully Automated Safety Doors', 'Application: 24/7 Industrial Use'],
-  image: '/images/closed body laser.png'
-},
-    {
-        id: 'i-nax-vmc-with-tinted-windows',
-        name: 'I-NAX VMC with tinted windows',
-        price: '₹5,80,000',
-        description: 'Advanced vertical milling machine.',
-        specs: ['Table size: 1200x300', 'Speed: 3000 RPM'],
-        image: '/images/I-NAX VMC with Tinted Windows.png'
-    },
-    {
-  id: 'i-nax-vertical-machine-center',
-  name: 'I-NAX Vertical Machine Center',
-  description: 'Precision CNC Machining Solution - High-performance VMC for complex milling, drilling, and mold making.',
-  longDescription: `
+    specs: ['Bed: 1000mm', 'Motor: 5HP'],
+    image: '/images/Modern I-NAX CNC Lathe Machine.png'
+  },
+  {
+    id: 'i-nax-vertical-machine-center',
+    name: 'i-NAX™ Vertical Machine Center',
+    des: 'Advanced machining for complex parts requiring high accuracy and multi-operation performance.',
+    description: 'Precision CNC Machining Solution - High-performance VMC for complex milling, drilling, and mold making.',
+    longDescription: `
     <h3>Overview</h3>
     <p>The i-NAX Vertical Machine Center (VMC) is a high-performance CNC machining solution designed for precision milling, drilling, and complex part machining across a wide range of industrial applications. Built with a robust vertical spindle configuration, this machine offers superior rigidity, high accuracy, and reliable performance.</p>
     <p>It is ideal for automotive, aerospace, mold & die, general engineering, and precision manufacturing environments. The VMC features a vertically oriented spindle and advanced CNC control to automate machining tasks with exceptional repeatability and efficiency.</p>
@@ -421,212 +258,15 @@ export const machinesData = [
       You can contact our sales team through the website enquiry form or call our support team directly for pricing.</p>
     </div>
   `,
-  specs: ['ATC Capacity: 16-24 Tools', 'Spindle: Up to 12,000 RPM'],
-  image: '/images/I-NAX Vertical Machining Center.png'
-},
-    {
-  id: 'i-nax-radial-drilling-machine',
-  name: 'I-NAX Radial Drilling Machine',
-  description: 'Precision & Performance in Every Drilling Task - Engineered for heavy-duty industrial drilling and flexible operation.',
-  longDescription: `
-    <h3>Overview</h3>
-    <p>The i-NAX Radial Drilling Machine is engineered for heavy-duty industrial drilling, offering high precision, rugged durability, and flexible operation for metalworking workshops, fabrication units, and production lines.</p>
-    <p>Its robust build and adaptable radial arm allow efficient drilling, reaming, tapping, and counterboring on large and irregular workpieces — making it ideal for steel, cast iron, aluminum, and other materials.</p>
-
-    <h3>Key Features</h3>
-    <p>✔ <strong>Heavy-Duty Radial Design:</strong> A heavy vertical column with a movable radial arm lets the spindle reach over large workpieces without constant repositioning.<br/>
-    ✔ <strong>Wide Drilling Capacity:</strong> Built to handle a broad range of jobs — from medium-size drilling to large industrial holes.<br/>
-    ✔ <strong>Precise Spindle Control:</strong> Multi-speed spindle range with adjustable feed rates for optimal cutting across various materials.<br/>
-    ✔ <strong>Flexible Arm Movement:</strong> Radial arm can swivel and extend horizontally, giving excellent reach to hard-to-reach work areas.<br/>
-    ✔ <strong>Solid Construction:</strong> Cast iron base and column provide excellent vibration damping and long service life.<br/>
-    ✔ <strong>User-Friendly Operation:</strong> Intuitive controls on the head stock reduce setup times and improve efficiency.</p>
-
-    <h3>Technical Specifications (Typical)</h3>
-    <table class="spec-table">
-      <thead>
-        <tr><th>Specification</th><th>Typical Value</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Drilling Capacity</td><td>Up to 80 mm (industrial)</td></tr>
-        <tr><td>Spindle Speed Range</td><td>Multiple speeds (e.g., 16–1250 rpm)</td></tr>
-        <tr><td>Spindle Taper</td><td>Morse Taper (e.g., MT6)</td></tr>
-        <tr><td>Worktable Size</td><td>Large T-slot table for secure clamping</td></tr>
-        <tr><td>Arm Horizontal Travel</td><td>Extensive reach for big workpieces</td></tr>
-        <tr><td>Motor Power</td><td>Optimal industrial power rating</td></tr>
-        <tr><td>Construction Weight</td><td>Heavy frame for vibration reduction</td></tr>
-      </tbody>
-    </table>
-    <p><small>* Note: Figures are representative and vary by specific model configuration.</small></p>
-
-    <h3>Applications</h3>
-    <p>The i-NAX Radial Drilling Machine is ideal for:</p>
-    <p>🔹 Industrial and manufacturing drilling operations<br/>
-    🔹 Metal fabrication and repair workshops<br/>
-    🔹 Component machining for automotive and aerospace<br/>
-    🔹 Maintenance and heavy equipment servicing</p>
-
-    <h3>Standard Accessories</h3>
-    <p>• Drill chuck & key<br/>
-    • T-slot worktable<br/>
-    • Safety guards<br/>
-    • Tool set and wrenches</p>
-
-    <h3>Frequently Asked Questions</h3>
-    <div class="faq-box">
-      <p><strong>1. What is a radial drilling machine?</strong><br/>
-      It is a versatile industrial tool where the radial arm can swivel and adjust horizontally, allowing the drill head to reach different positions without moving heavy workpieces.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>2. What materials can it work on?</strong><br/>
-      It is suitable for steel, cast iron, aluminum, non-ferrous metals, plastics, and composites.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>3. What drilling capacity does it offer?</strong><br/>
-      Capacity varies by model, but generally handles medium to large diameters (up to 80mm) suitable for heavy industry.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>4. How do I adjust the speed and feed?</strong><br/>
-      The machine features adjustable multi-speed spindle handles on the headstock to optimize performance for different hole sizes.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>5. Is the radial arm adjustable?</strong><br/>
-      Yes, it swivels and moves horizontally along the vertical column for precise positioning.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>6. Does it come with safety features?</strong><br/>
-      Yes, including emergency stops, safety guards, and secured enclosures for moving parts.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>7. What accessories are typically included?</strong><br/>
-      Common accessories include drill chuck and key, T-slot worktable, tool set, wrenches, and safety guards.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>8. Can I use this machine for tapping operations?</strong><br/>
-      Yes. With the appropriate tooling and settings, it can perform tapping and reaming in addition to drilling.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>9. How do I install and maintain the machine?</strong><br/>
-      Installation should be on a leveled concrete floor. Maintenance includes regular lubrication and periodic cleaning as per the manual.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>10. What is the power requirement?</strong><br/>
-      Power requirements depend on the model and motor size, typically requiring industrial 3-phase power.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>11. Is operator training required?</strong><br/>
-      Yes. Trained personnel should operate it to ensure safety and optimal drilling performance.</p>
-    </div>
-    <div class="faq-box">
-      <p><strong>12. Can the machine be customized?</strong><br/>
-      Yes. Optional features like work lights, digital readouts (DRO), and coolant systems can be added based on requirements.</p>
-    </div>
-  `,
-  specs: ['Capacity: Up to 80 mm', 'Taper: MT6 Morse Taper'],
-  image: '/images/I-NAX Radial Drilling Machine Close-up.png'
-},
-    {
-  id: 'i-nax-milling-machine',
-  name: 'I-NAX Milling Machine',
-  description: 'Precision. Power. Reliability. Engineered for high-accuracy metal cutting, shaping, and surface finishing.',
-  longDescription: `
-    <h3>Overview</h3>
-    <p><strong>Precision. Power. Reliability.</strong></p>
-    <p>The i-NAX Milling Machine is engineered for high-accuracy metal cutting, shaping, slotting, and surface finishing operations. Built with a rigid cast-iron structure and precision-ground components, it delivers consistent performance for tool rooms, fabrication units, workshops, and industrial manufacturing environments.</p>
-    <p>Designed to handle both light and heavy milling tasks, the i-NAX Milling Machine ensures excellent surface finish, long machine life, and operator-friendly controls.</p>
-
-    <h3>Key Features</h3>
-    <p>✔ <strong>Heavy-Duty Cast Iron Body:</strong> Minimizes vibration and ensures long-term dimensional accuracy.<br/>
-    ✔ <strong>High Precision Spindle:</strong> Smooth rotation with excellent load-bearing capacity for accurate machining.<br/>
-    ✔ <strong>Wide Working Table:</strong> Supports multiple clamping setups and larger workpieces.<br/>
-    ✔ <strong>Geared / Belt-Driven Head Options:</strong> Reliable torque transmission with low maintenance.<br/>
-    ✔ <strong>Hardened & Ground Guideways:</strong> Smooth table movement and extended wear resistance.<br/>
-    ✔ <strong>Manual / Semi-Automatic Operation:</strong> Easy to operate with precise feed control.<br/>
-    ✔ <strong>Low Maintenance Design:</strong> Designed for continuous industrial use with minimal downtime.</p>
-
-    <h3>Applications</h3>
-    <p>The i-NAX Milling Machine is suitable for a wide range of operations:</p>
-    <p>🔹 Surface milling<br/>
-    🔹 Slot and keyway cutting<br/>
-    🔹 Gear cutting<br/>
-    🔹 Profile and contour milling<br/>
-    🔹 Drilling and boring operations<br/>
-    🔹 Tool and die making<br/>
-    🔹 Job work and batch production</p>
-
-    <h3>Industries Served</h3>
-    <p>• Engineering Workshops<br/>
-    • Automotive & Auto Components<br/>
-    • Tool Rooms<br/>
-    • Fabrication Units<br/>
-    • General Manufacturing Industries</p>
-
-    <h3>Technical Specifications (Indicative)</h3>
-    <table class="spec-table">
-      <thead>
-        <tr><th>Parameter</th><th>Specification</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Table Size</td><td>Customizable</td></tr>
-        <tr><td>Spindle Speed</td><td>Multiple speed ranges</td></tr>
-        <tr><td>Spindle Taper</td><td>ISO / MT options</td></tr>
-        <tr><td>Table Travel (X/Y/Z)</td><td>As per model</td></tr>
-        <tr><td>Motor Power</td><td>Heavy-duty industrial motor</td></tr>
-        <tr><td>Machine Type</td><td>Vertical / Universal (as per requirement)</td></tr>
-        <tr><td>Construction</td><td>Rigid cast iron</td></tr>
-      </tbody>
-    </table>
-    <p><small>* Specifications may vary based on model and customer requirements.</small></p>
-
-    <h3>Why Choose i-NAX Milling Machine?</h3>
-    <p>✅ High machining accuracy<br/>
-    ✅ Robust industrial construction<br/>
-    ✅ Smooth and reliable operation<br/>
-    ✅ Custom configurations available<br/>
-    ✅ Strong after-sales and service support<br/>
-    ✅ Cost-effective solution for long-term use</p>
-
-    <h3>Optional Accessories</h3>
-    <p>✔ Digital Readout (DRO)<br/>
-    ✔ Rotary Table<br/>
-    ✔ Milling Vice<br/>
-    ✔ Clamping Kit<br/>
-    ✔ Coolant System<br/>
-    ✔ Power Feed Unit</p>
-
-    <h3>Frequently Asked Questions</h3>
-    <div class="faq-box">
-      <p><strong>Q1. Is the i-NAX Milling Machine suitable for heavy-duty work?</strong><br/>
-      Yes, it is built with a rigid cast-iron structure and hardened guideways, making it suitable for both medium and heavy-duty milling applications.</p>
-    </div>
-
-    <div class="faq-box">
-      <p><strong>Q2. Can this machine be customized?</strong><br/>
-      Yes, table size, spindle options, motor power, and accessories can be customized based on customer requirements.</p>
-    </div>
-
-    <div class="faq-box">
-      <p><strong>Q3. What type of milling operations can it perform?</strong><br/>
-      It can perform surface milling, slotting, drilling, boring, gear cutting, and profile milling operations.</p>
-    </div>
-
-    <div class="faq-box">
-      <p><strong>Q4. Is operator training required?</strong><br/>
-      Basic machine operation knowledge is sufficient. Optional training and documentation can be provided upon installation.</p>
-    </div>
-
-    <div class="faq-box">
-      <p><strong>Q5. Do you provide installation and service support?</strong><br/>
-      Yes, i-NAX provides professional installation guidance and reliable after-sales service support across India.</p>
-    </div>
-  `,
-  specs: ['Construction: Rigid Cast Iron', 'Type: Vertical / Universal'],
-  image: '/images/I-NAX Milling Machine in Detail.png'
-},
-    {
-  id: 'i-nax-laser-marking-workstation-design',
-  name: 'I-NAX Laser Marking Workstation Design',
-  description: 'Advanced industrial laser marking solution for high-precision, permanent engraving on metals, plastics, and more.',
-  longDescription: `
+    specs: ['ATC Capacity: 16-24 Tools', 'Spindle: Up to 12,000 RPM'],
+    image: '/images/I-NAX Vertical Machining Center.png'
+  },
+  {
+    id: 'i-nax-laser-marking-workstation-design',
+    name: 'i-NAX™ Laser Marking Workstation Design',
+    des : 'Permanent, high-speed marking for industrial components, QR codes, branding, and traceability applications.',
+    description: 'Advanced industrial laser marking solution for high-precision, permanent engraving on metals, plastics, and more.',
+    longDescription: `
     <h3>Product Overview</h3>
     <p>The i-NAX Laser Marking Workstation Machine is an advanced industrial laser marking solution designed for high-precision, permanent marking and engraving on a wide variety of materials. Built for reliability and performance, this workstation combines robust construction with intuitive operation to support manufacturing, traceability, branding and serialization workflows.</p>
     <p>Laser marking technology uses a focused laser beam to etch or alter the surface of the material without physical contact, creating permanent markings such as serial numbers, QR codes, barcodes, logos, text and graphics with exceptional clarity and repeatability.</p>
@@ -726,14 +366,383 @@ export const machinesData = [
       Warranty terms vary. Please contact our sales representative for details on service contracts and technical support.</p>
     </div>
   `,
-  specs: ['Laser: Fiber/CO2', 'Marking Area: Up to 110x110mm'],
-  image: '/images/I-NAX Laser Marking Workstation Design.png'
-},
-    {
-  id: 'i-nax-industrial-press-brake-machine',
-  name: 'i-NAX Industrial Press Brake Machine',
-  description: 'Precision Metal Bending Solution - High-performance machine designed for heavy-duty industrial metal forming.',
-  longDescription: `
+    specs: ['Laser: Fiber/CO2', 'Marking Area: Up to 110x110mm'],
+    image: '/images/I-NAX Laser Marking Workstation Design.png'
+  },
+  {
+    id: 'multi-spindle-router-machine',
+    name: 'Multi Spindle Router Machine',
+    description: 'High-efficiency woodworking and composite processing with multiple spindles for simultaneous mass production.',
+    longDescription: `
+    <h3>Overview</h3>
+    <p>The Multi-Spindle Router Machine is designed for high-efficiency woodworking, plastic, and composite material processing. With multiple spindles working simultaneously, this machine significantly reduces production time while maintaining precision and quality.</p>
+    <p>Ideal for industrial applications requiring repetitive cutting, drilling, and shaping operations, it ensures consistent performance and superior output for high-volume manufacturing.</p>
+ 
+    <h3>Key Features</h3>
+    <p>✔ <strong>Multiple Spindles:</strong> Allows simultaneous routing on several points, vastly increasing productivity.<br/>
+    ✔ <strong>High Precision:</strong> Equipped with advanced CNC control for accurate cutting and repeatable shaping.<br/>
+    ✔ <strong>Robust Construction:</strong> Heavy-duty frame ensures stability and vibration-free high-speed operations.<br/>
+    ✔ <strong>Versatile Operations:</strong> Suitable for wood, MDF, acrylic, PVC, and composite materials.<br/>
+    ✔ <strong>User-Friendly Interface:</strong> Easy-to-operate control panel with digital display for quick setup.<br/>
+    ✔ <strong>Automatic Tool Change (Optional):</strong> Further reduces downtime and enhances process efficiency.<br/>
+    ✔ <strong>Energy Efficient:</strong> Optimized motor design reduces power consumption during heavy runs.</p>
+
+    
+
+    <h3>Applications</h3>
+    <p>The Multi-Spindle Router is the perfect choice for:</p>
+    <p>🔹 Mass production of wooden furniture components<br/>
+    🔹 Door and window frame manufacturing<br/>
+    🔹 Panel processing for cabinetry and interior décor<br/>
+    🔹 CNC cutting and drilling for plastic and composite materials<br/>
+    🔹 Large-scale production of moldings, trims, and decorative woodwork</p>
+
+    <h3>Technical Specifications</h3>
+    <table class="spec-table">
+      <thead>
+        <tr><th>Feature</th><th>Specification</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Number of Spindles</td><td>3 / 4 / 6 (depending on model)</td></tr>
+        <tr><td>Spindle Power</td><td>3 HP – 5 HP per spindle</td></tr>
+        <tr><td>Speed Range</td><td>5000 – 24,000 RPM</td></tr>
+        <tr><td>Table Size</td><td>1200 x 600 mm (customizable)</td></tr>
+        <tr><td>Control System</td><td>CNC / PLC</td></tr>
+        <tr><td>Power Supply</td><td>380V, 3 Phase</td></tr>
+        <tr><td>Machine Dimensions</td><td>2500 x 1800 x 1600 mm</td></tr>
+        <tr><td>Weight</td><td>1200 – 2000 kg</td></tr>
+        <tr><td>Cooling System</td><td>Air / Water-cooled spindle options</td></tr>
+      </tbody>
+    </table>
+
+    <h3>FAQ</h3>
+    <div class="faq-box">
+      <p><strong>Q1: What materials can the Multi-Spindle Router Machine process?</strong><br/>
+      A: It can efficiently handle wood, MDF, plywood, acrylic, PVC, and various industrial composite materials.</p>
+    </div>
+
+    <div class="faq-box">
+      <p><strong>Q2: How many spindles does the machine have?</strong><br/>
+      A: Depending on your production requirement and the specific model, it can be equipped with 3, 4, or 6 spindles working simultaneously.</p>
+    </div>
+
+    <div class="faq-box">
+      <p><strong>Q3: Is the machine suitable for small-scale production?</strong><br/>
+      A: Yes, while it excels at mass production, its precision and ease of setup make it highly efficient for both small and large-scale industrial projects.</p>
+    </div>
+
+    <div class="faq-box">
+      <p><strong>Q4: Does it support CNC programming?</strong><br/>
+      A: Yes, it comes integrated with an advanced CNC or PLC control system to ensure precise automation and compatibility with standard design files.</p>
+    </div>
+
+    <div class="faq-box">
+      <p><strong>Q5: Is the machine customizable for specific production needs?</strong><br/>
+      A: Absolutely. We offer customization for the table size, spindle count, and motor power to align with your specific manufacturing goals.</p>
+    </div>
+  `,
+    specs: ['Spindles: 3/4/6 Heads', 'Application: Mass Production'],
+    image: '/images/Multi-Spindle Router Machine Display.png'
+  },
+  
+  {
+    id: 'i-nax-open-body-laser-cutting-machine',
+    des: 'High-speed metal cutting with superior precision and low operating cost. Ideal for sheet metal fabrication and industrial production.',
+    name: 'i-NAX™ Open Body Laser Cutting Machine',
+    description: 'High-efficiency woodworking and composite processing with multiple spindles for simultaneous mass production.',
+    longDescription: `
+    <h3>Overview</h3>
+    <p>The i-NAX Open Body Laser Cutting Machine is a high-performance CNC fiber laser metal cutting machine designed for fast, precise, and reliable sheet metal processing. With its open structure design, this machine allows easy material handling and smooth workflow, making it an ideal solution for modern fabrication units and industrial manufacturers.</p>
+    <p>Engineered with advanced fiber laser technology, the i-NAX open body laser machine delivers superior cutting accuracy, smooth edges, and consistent results across a wide range of metal thicknesses. Its rigid frame construction ensures vibration-free operation, long machine life, and stable cutting performance even during continuous production.</p>
+
+    <h3>High-Precision CNC Fiber Laser Metal Cutting Machine</h3>
+    <p>The i-NAX open body model operates as a fully automated CNC laser cutting machine, ensuring repeatable accuracy and high cutting speed. This fiber laser metal cutting machine is suitable for processing mild steel, stainless steel, aluminum, brass, and copper with excellent edge quality and minimal material waste.</p>
+    <p>The intelligent CNC control system allows easy programming, precise nesting, and efficient production management, reducing operator dependency and improving overall productivity.</p>
+
+    <h3>Open Body Laser Machine Size Options</h3>
+    <p>The open body laser machine size can be selected based on your production requirements. i-NAX offers multiple cutting bed configurations suitable for small, medium, and large fabrication units. Common size options include:</p>
+    <p>• 3000 × 1500 mm<br/>
+    • 4000 × 2000 mm<br/>
+    • 6000 × 2000 mm<br/>
+    <small>(Custom sizes available on request)</small></p>
+
+    <h3>Open Body Laser Cutter with Pallet Changer</h3>
+    <p>For high-volume operations, i-NAX also offers an Open Body Laser Cutter with Pallet Changer. This metal sheet laser cutting machine with pallet enables simultaneous cutting and sheet loading, significantly reducing idle time and increasing output. It is an ideal choice for industries focused on speed, automation, and large-scale production.</p>
+
+    <h3>Open Body Laser Machine Cost & Price</h3>
+    <p>The open body laser machine cost depends on factors such as laser power, machine size, CNC controller, and optional automation features like a pallet changer. The open body laser machine cost price is optimized to deliver maximum value, low operating cost, and long-term reliability.</p>
+    <p>For accurate pricing and configuration details, customers can contact i-NAX – a trusted Fiber Laser Cutting Machine Trader and Manufacturer in India.</p>
+
+    <h3>Applications</h3>
+    <p>The i-NAX Open Body Laser Cutting Machine is widely used in:<br/>
+    🔹 <strong>Sheet metal fabrication</strong><br/>
+    🔹 <strong>Automotive and auto components</strong><br/>
+    🔹 <strong>Electrical panels and enclosures</strong><br/>
+    🔹 <strong>Industrial machinery parts</strong><br/>
+    🔹 <strong>Furniture and decorative metal work</strong></p>
+
+    <h3>Why Choose i-NAX Open Body Laser Cutting Machine?</h3>
+    <p>✔ High-speed fiber laser cutting technology<br/>
+    ✔ Strong open body structure for easy handling<br/>
+    ✔ Accurate CNC control and low maintenance<br/>
+    ✔ Energy-efficient and cost-effective operation<br/>
+    ✔ Reliable service and support across India</p>
+
+    <h3>Frequently Asked Questions – i-NAX Open Body Laser Cutting Machine</h3>
+    <div class="faq-box">
+      <p><strong>1. What is an open body laser cutting machine?</strong><br/>
+      An open body laser cutting machine is a CNC fiber laser system with an open structure that allows easy loading and unloading of metal sheets. It is ideal for fast and flexible sheet metal cutting operations.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>2. What is the open body laser machine cost?</strong><br/>
+      The open body laser machine cost depends on laser power, machine size, CNC controller, and optional features like a pallet changer. For the exact cost price, it is best to contact i-NAX with your cutting requirements.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>3. What sizes are available in i-NAX open body laser machines?</strong><br/>
+      i-NAX open body laser machines are available in multiple sizes such as 3000 × 1500 mm, 4000 × 2000 mm, and 6000 × 2000 mm. Custom machine sizes can also be provided based on application needs.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>4. Which materials can be cut using a fiber laser metal cutting machine?</strong><br/>
+      The i-NAX fiber laser metal cutting machine can cut mild steel (MS), stainless steel (SS), aluminum, brass, and copper with high precision and smooth edge quality.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>5. What is an open body laser cutter with pallet changer?</strong><br/>
+      An open body laser cutter with pallet changer is an automated system that allows cutting on one pallet while loading or unloading material on another, increasing productivity and reducing machine idle time.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>6. Is the i-NAX machine a CNC laser cutting machine?</strong><br/>
+      Yes, the i-NAX open body laser cutting machine is a fully automated CNC laser cutting machine with advanced control software for accurate and repeatable metal cutting.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>7. Which industries use metal sheet laser cutting machines?</strong><br/>
+      Metal sheet laser cutting machines are widely used in sheet metal fabrication, automotive components, electrical panels, industrial machinery, furniture, and decorative metal applications.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>8. Does i-NAX provide installation and after-sales support?</strong><br/>
+      Yes, i-NAX provides professional installation, operator training, and reliable after-sales service support across India.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>9. Why choose i-NAX as a fiber laser cutting machine trader?</strong><br/>
+      i-NAX is a trusted fiber laser cutting machine trader and manufacturer, known for durable machines, competitive pricing, and strong technical support.</p>
+    </div>
+  `,
+    specs: ['Bed Size: Up to 6000x2000 mm', 'Type: Fiber Laser CNC'],
+    image: '/images/laser machine.png'
+  },
+  
+  {
+    id: 'i-nax-vmc-with-tinted-windows',
+    name: 'i-NAX™ VMC with tinted windows',
+    price: '₹5,80,000',
+    description: 'Advanced vertical milling machine.',
+    specs: ['Table size: 1200x300', 'Speed: 3000 RPM'],
+    image: '/images/I-NAX VMC with Tinted Windows.png'
+  },
+  
+  {
+    id: 'i-nax-radial-drilling-machine',
+    name: 'i-NAX™ Radial Drilling Machine',
+    description: 'Precision & Performance in Every Drilling Task - Engineered for heavy-duty industrial drilling and flexible operation.',
+    longDescription: `
+    <h3>Overview</h3>
+    <p>The i-NAX Radial Drilling Machine is engineered for heavy-duty industrial drilling, offering high precision, rugged durability, and flexible operation for metalworking workshops, fabrication units, and production lines.</p>
+    <p>Its robust build and adaptable radial arm allow efficient drilling, reaming, tapping, and counterboring on large and irregular workpieces — making it ideal for steel, cast iron, aluminum, and other materials.</p>
+
+    <h3>Key Features</h3>
+    <p>✔ <strong>Heavy-Duty Radial Design:</strong> A heavy vertical column with a movable radial arm lets the spindle reach over large workpieces without constant repositioning.<br/>
+    ✔ <strong>Wide Drilling Capacity:</strong> Built to handle a broad range of jobs — from medium-size drilling to large industrial holes.<br/>
+    ✔ <strong>Precise Spindle Control:</strong> Multi-speed spindle range with adjustable feed rates for optimal cutting across various materials.<br/>
+    ✔ <strong>Flexible Arm Movement:</strong> Radial arm can swivel and extend horizontally, giving excellent reach to hard-to-reach work areas.<br/>
+    ✔ <strong>Solid Construction:</strong> Cast iron base and column provide excellent vibration damping and long service life.<br/>
+    ✔ <strong>User-Friendly Operation:</strong> Intuitive controls on the head stock reduce setup times and improve efficiency.</p>
+
+    <h3>Technical Specifications (Typical)</h3>
+    <table class="spec-table">
+      <thead>
+        <tr><th>Specification</th><th>Typical Value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Drilling Capacity</td><td>Up to 80 mm (industrial)</td></tr>
+        <tr><td>Spindle Speed Range</td><td>Multiple speeds (e.g., 16–1250 rpm)</td></tr>
+        <tr><td>Spindle Taper</td><td>Morse Taper (e.g., MT6)</td></tr>
+        <tr><td>Worktable Size</td><td>Large T-slot table for secure clamping</td></tr>
+        <tr><td>Arm Horizontal Travel</td><td>Extensive reach for big workpieces</td></tr>
+        <tr><td>Motor Power</td><td>Optimal industrial power rating</td></tr>
+        <tr><td>Construction Weight</td><td>Heavy frame for vibration reduction</td></tr>
+      </tbody>
+    </table>
+    <p><small>* Note: Figures are representative and vary by specific model configuration.</small></p>
+
+    <h3>Applications</h3>
+    <p>The i-NAX Radial Drilling Machine is ideal for:</p>
+    <p>🔹 Industrial and manufacturing drilling operations<br/>
+    🔹 Metal fabrication and repair workshops<br/>
+    🔹 Component machining for automotive and aerospace<br/>
+    🔹 Maintenance and heavy equipment servicing</p>
+
+    <h3>Standard Accessories</h3>
+    <p>• Drill chuck & key<br/>
+    • T-slot worktable<br/>
+    • Safety guards<br/>
+    • Tool set and wrenches</p>
+
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-box">
+      <p><strong>1. What is a radial drilling machine?</strong><br/>
+      It is a versatile industrial tool where the radial arm can swivel and adjust horizontally, allowing the drill head to reach different positions without moving heavy workpieces.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>2. What materials can it work on?</strong><br/>
+      It is suitable for steel, cast iron, aluminum, non-ferrous metals, plastics, and composites.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>3. What drilling capacity does it offer?</strong><br/>
+      Capacity varies by model, but generally handles medium to large diameters (up to 80mm) suitable for heavy industry.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>4. How do I adjust the speed and feed?</strong><br/>
+      The machine features adjustable multi-speed spindle handles on the headstock to optimize performance for different hole sizes.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>5. Is the radial arm adjustable?</strong><br/>
+      Yes, it swivels and moves horizontally along the vertical column for precise positioning.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>6. Does it come with safety features?</strong><br/>
+      Yes, including emergency stops, safety guards, and secured enclosures for moving parts.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>7. What accessories are typically included?</strong><br/>
+      Common accessories include drill chuck and key, T-slot worktable, tool set, wrenches, and safety guards.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>8. Can I use this machine for tapping operations?</strong><br/>
+      Yes. With the appropriate tooling and settings, it can perform tapping and reaming in addition to drilling.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>9. How do I install and maintain the machine?</strong><br/>
+      Installation should be on a leveled concrete floor. Maintenance includes regular lubrication and periodic cleaning as per the manual.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>10. What is the power requirement?</strong><br/>
+      Power requirements depend on the model and motor size, typically requiring industrial 3-phase power.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>11. Is operator training required?</strong><br/>
+      Yes. Trained personnel should operate it to ensure safety and optimal drilling performance.</p>
+    </div>
+    <div class="faq-box">
+      <p><strong>12. Can the machine be customized?</strong><br/>
+      Yes. Optional features like work lights, digital readouts (DRO), and coolant systems can be added based on requirements.</p>
+    </div>
+  `,
+    specs: ['Capacity: Up to 80 mm', 'Taper: MT6 Morse Taper'],
+    image: '/images/I-NAX Radial Drilling Machine Close-up.png'
+  },
+  {
+    id: 'i-nax-milling-machine',
+    name: 'i-NAX™ Milling Machine',
+    description: 'Precision. Power. Reliability. Engineered for high-accuracy metal cutting, shaping, and surface finishing.',
+    longDescription: `
+    <h3>Overview</h3>
+    <p><strong>Precision. Power. Reliability.</strong></p>
+    <p>The i-NAX Milling Machine is engineered for high-accuracy metal cutting, shaping, slotting, and surface finishing operations. Built with a rigid cast-iron structure and precision-ground components, it delivers consistent performance for tool rooms, fabrication units, workshops, and industrial manufacturing environments.</p>
+    <p>Designed to handle both light and heavy milling tasks, the i-NAX Milling Machine ensures excellent surface finish, long machine life, and operator-friendly controls.</p>
+
+    <h3>Key Features</h3>
+    <p>✔ <strong>Heavy-Duty Cast Iron Body:</strong> Minimizes vibration and ensures long-term dimensional accuracy.<br/>
+    ✔ <strong>High Precision Spindle:</strong> Smooth rotation with excellent load-bearing capacity for accurate machining.<br/>
+    ✔ <strong>Wide Working Table:</strong> Supports multiple clamping setups and larger workpieces.<br/>
+    ✔ <strong>Geared / Belt-Driven Head Options:</strong> Reliable torque transmission with low maintenance.<br/>
+    ✔ <strong>Hardened & Ground Guideways:</strong> Smooth table movement and extended wear resistance.<br/>
+    ✔ <strong>Manual / Semi-Automatic Operation:</strong> Easy to operate with precise feed control.<br/>
+    ✔ <strong>Low Maintenance Design:</strong> Designed for continuous industrial use with minimal downtime.</p>
+
+    <h3>Applications</h3>
+    <p>The i-NAX Milling Machine is suitable for a wide range of operations:</p>
+    <p>🔹 Surface milling<br/>
+    🔹 Slot and keyway cutting<br/>
+    🔹 Gear cutting<br/>
+    🔹 Profile and contour milling<br/>
+    🔹 Drilling and boring operations<br/>
+    🔹 Tool and die making<br/>
+    🔹 Job work and batch production</p>
+
+    <h3>Industries Served</h3>
+    <p>• Engineering Workshops<br/>
+    • Automotive & Auto Components<br/>
+    • Tool Rooms<br/>
+    • Fabrication Units<br/>
+    • General Manufacturing Industries</p>
+
+    <h3>Technical Specifications (Indicative)</h3>
+    <table class="spec-table">
+      <thead>
+        <tr><th>Parameter</th><th>Specification</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Table Size</td><td>Customizable</td></tr>
+        <tr><td>Spindle Speed</td><td>Multiple speed ranges</td></tr>
+        <tr><td>Spindle Taper</td><td>ISO / MT options</td></tr>
+        <tr><td>Table Travel (X/Y/Z)</td><td>As per model</td></tr>
+        <tr><td>Motor Power</td><td>Heavy-duty industrial motor</td></tr>
+        <tr><td>Machine Type</td><td>Vertical / Universal (as per requirement)</td></tr>
+        <tr><td>Construction</td><td>Rigid cast iron</td></tr>
+      </tbody>
+    </table>
+    <p><small>* Specifications may vary based on model and customer requirements.</small></p>
+
+    <h3>Why Choose i-NAX Milling Machine?</h3>
+    <p>✅ High machining accuracy<br/>
+    ✅ Robust industrial construction<br/>
+    ✅ Smooth and reliable operation<br/>
+    ✅ Custom configurations available<br/>
+    ✅ Strong after-sales and service support<br/>
+    ✅ Cost-effective solution for long-term use</p>
+
+    <h3>Optional Accessories</h3>
+    <p>✔ Digital Readout (DRO)<br/>
+    ✔ Rotary Table<br/>
+    ✔ Milling Vice<br/>
+    ✔ Clamping Kit<br/>
+    ✔ Coolant System<br/>
+    ✔ Power Feed Unit</p>
+
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-box">
+      <p><strong>Q1. Is the i-NAX Milling Machine suitable for heavy-duty work?</strong><br/>
+      Yes, it is built with a rigid cast-iron structure and hardened guideways, making it suitable for both medium and heavy-duty milling applications.</p>
+    </div>
+
+    <div class="faq-box">
+      <p><strong>Q2. Can this machine be customized?</strong><br/>
+      Yes, table size, spindle options, motor power, and accessories can be customized based on customer requirements.</p>
+    </div>
+
+    <div class="faq-box">
+      <p><strong>Q3. What type of milling operations can it perform?</strong><br/>
+      It can perform surface milling, slotting, drilling, boring, gear cutting, and profile milling operations.</p>
+    </div>
+
+    <div class="faq-box">
+      <p><strong>Q4. Is operator training required?</strong><br/>
+      Basic machine operation knowledge is sufficient. Optional training and documentation can be provided upon installation.</p>
+    </div>
+
+    <div class="faq-box">
+      <p><strong>Q5. Do you provide installation and service support?</strong><br/>
+      Yes, i-NAX provides professional installation guidance and reliable after-sales service support across India.</p>
+    </div>
+  `,
+    specs: ['Construction: Rigid Cast Iron', 'Type: Vertical / Universal'],
+    image: '/images/I-NAX Milling Machine in Detail.png'
+  },
+  
+  {
+    id: 'i-nax-industrial-press-brake-machine',
+    name: 'i-NAX™ Industrial Press Brake Machine',
+    description: 'Precision Metal Bending Solution - High-performance machine designed for heavy-duty industrial metal forming.',
+    longDescription: `
     <h3>Overview</h3>
     <p>The i-NAX Industrial Press Brake Machine is a high-performance metal bending machine designed for heavy-duty industrial applications. A press brake is a mechanical/hydraulic system used to bend sheet metal and plate into predetermined shapes with precision and repeatability.</p>
     <p>Built with a robust frame and advanced control systems, the i-NAX Press Brake delivers consistent bending quality, high productivity, and long-lasting durability — making it ideal for manufacturers, fabricators, and industrial workshops.</p>
@@ -834,14 +843,14 @@ export const machinesData = [
       Yes. Safety features include emergency stop buttons, safety guards, and controlled operating modes for a safe environment.</p>
     </div>
   `,
-  specs: ['Bending: 20T to 400T', 'Length: 1.5m to 6.5m'],
-  image: '/images/I-NAX Industrial Press Brake Machine.png'
-},
-    {
-  id: 'i-nax-cnc-router-with-controller',
-  name: 'i-NAX CNC Router with Controller',
-  description: 'Precision CNC Router for Wood, Acrylic, MDF, Plastic & More - High-performance machine for accurate cutting and engraving.',
-  longDescription: `
+    specs: ['Bending: 20T to 400T', 'Length: 1.5m to 6.5m'],
+    image: '/images/I-NAX Industrial Press Brake Machine.png'
+  },
+  {
+    id: 'i-nax-cnc-router-with-controller',
+    name: 'i-NAX™ CNC Router with Controller',
+    description: 'Precision CNC Router for Wood, Acrylic, MDF, Plastic & More - High-performance machine for accurate cutting and engraving.',
+    longDescription: `
     <h3>Overview</h3>
     <p>The i-NAX CNC Router with Controller is a high-performance CNC machine designed for accurate and smooth cutting, engraving, and shaping across a wide range of materials. Built for modern manufacturing needs, this router delivers consistent results with excellent stability and reliability.</p>
 
@@ -956,14 +965,14 @@ export const machinesData = [
       Yes, we provide complete after-sales service including genuine spare parts for the i-NAX series.</p>
     </div>
   `,
-  specs: ['Controller: DSP/Mach3', 'Repeatability: ±0.02 mm'],
-  image: '/images/I-NAX CNC Router with Controller.png'
-},
-    {
-  id: 'i-nax-cnc-router-precision-machinery',
-  name: 'i-NAX CNC Router Precision Machinery',
-  description: 'High-Performance Industrial CNC Router designed for industrial-grade precision machining across a wide range of materials.',
-  longDescription: `
+    specs: ['Controller: DSP/Mach3', 'Repeatability: ±0.02 mm'],
+    image: '/images/I-NAX CNC Router with Controller.png'
+  },
+  {
+    id: 'i-nax-cnc-router-precision-machinery',
+    name: 'i-NAX™ CNC Router Precision Machinery',
+    description: 'High-Performance Industrial CNC Router designed for industrial-grade precision machining across a wide range of materials.',
+    longDescription: `
     <h3>Overview</h3>
     <p><strong>High-Performance Industrial CNC Router</strong></p>
     <p>The i-NAX CNC Router Precision Machine is a heavy-duty, computer-controlled cutting and engraving solution designed for industrial-grade precision machining across a wide range of materials. It combines advanced motion control, rigid structural design, and versatile software integration to deliver consistent, reliable, and high-precision results for woodworking, signage, prototyping, and manufacturing applications.</p>
@@ -1062,14 +1071,14 @@ export const machinesData = [
       Power requirements typically range between 220V or 380V (3-phase) depending on the configuration.</p>
     </div>
   `,
-  specs: ['Accuracy: ±0.01 mm', 'Spindle: Up to 24,000 RPM'],
-  image: '/images/I-NAX CNC Router Precision Machinery.png'
-},
-    {
-  id: 'i-nax-cnc-router-machine-setup',
-  name: 'i-NAX CNC Router Machine',
-  description: 'Precision CNC Router for Wood, MDF, Acrylic, and Composites - High-performance cutting and engraving.',
-  longDescription: `
+    specs: ['Accuracy: ±0.01 mm', 'Spindle: Up to 24,000 RPM'],
+    image: '/images/I-NAX CNC Router Precision Machinery.png'
+  },
+  {
+    id: 'i-nax-cnc-router-machine-setup',
+    name: 'i-NAX™ CNC Router Machine',
+    description: 'Precision CNC Router for Wood, MDF, Acrylic, and Composites - High-performance cutting and engraving.',
+    longDescription: `
     <h3>Overview</h3>
     <p><strong>Precision CNC Router for Wood, MDF, Acrylic, and Composites</strong></p>
     <p>The i-NAX CNC Router Machine is a high-performance CNC router designed for precision cutting, engraving, and shaping of wood, MDF, acrylic, PVC, aluminum, and composite materials. Built for modern manufacturing, this machine is perfect for furniture, sign boards, interior decor, and industrial applications.</p>
@@ -1183,14 +1192,14 @@ export const machinesData = [
       You can contact us through our website Contact Us page, call us, or email for a free demo, site visit, and price quotation.</p>
     </div>
   `,
-  specs: ['Area: 1300x2500 mm (Customizable)', 'Spindle: 3.0 - 6.0 kW'],
-  image: '/images/I-NAX CNC Router Machine Setup.png'
-},
-    {
-  id: 'i-nax-cnc-milling-machine-showcase',
-  name: 'i-NAX CNC Milling Machine',
-  description: 'Precision Machining for the Modern Manufacturer - High precision, exceptional surface finish, and repeatable performance.',
-  longDescription: `
+    specs: ['Area: 1300x2500 mm (Customizable)', 'Spindle: 3.0 - 6.0 kW'],
+    image: '/images/I-NAX CNC Router Machine Setup.png'
+  },
+  {
+    id: 'i-nax-cnc-milling-machine-showcase',
+    name: 'i-NAX™ CNC Milling Machine',
+    description: 'Precision Machining for the Modern Manufacturer - High precision, exceptional surface finish, and repeatable performance.',
+    longDescription: `
     <h3>Overview</h3>
     <p><strong>Precision Machining for the Modern Manufacturer</strong></p>
     <p>The i-NAX CNC Milling Machine is a state-of-the-art computer-controlled machining centre engineered to deliver high precision, exceptional surface finish, and repeatable performance for a wide range of industrial and precision manufacturing applications.</p>
@@ -1278,14 +1287,14 @@ export const machinesData = [
       A: Yes. We offer customized configurations based on your application needs, material requirements, and production goals.</p>
     </div>
   `,
-  specs: ['Axis Control: 3, 4, or 5 Axis', 'Materials: Metals, Plastics, Composites'],
-  image: '/images/I-NAX CNC Milling Machine Showcase.png'
-},
-    {
-  id: 'i-kraft-cnc-router-system',
-  name: 'i-KRAFT™ CNC Router System Machine',
-  description: 'High-performance CNC routing solution engineered for precision manufacturing applications.',
-  longDescription: `
+    specs: ['Axis Control: 3, 4, or 5 Axis', 'Materials: Metals, Plastics, Composites'],
+    image: '/images/I-NAX CNC Milling Machine Showcase.png'
+  },
+  {
+    id: 'i-kraft-cnc-router-system',
+    name: 'i-KRAFT™ CNC Router System Machine',
+    description: 'High-performance CNC routing solution engineered for precision manufacturing applications.',
+    longDescription: `
     <h3>Overview</h3>
     <p>The i-KRAFT™ CNC Router System Machine is a high-performance CNC routing solution engineered for precision manufacturing applications. Designed with a rigid frame, advanced CNC control, and high-speed spindle, i-KRAFT™ ensures accurate cutting, smooth finishing, and long-term reliability.</p>
     <p>Ideal for furniture manufacturing, signage, woodworking, and plastic processing industries, the i-KRAFT™ CNC Router offers customizable working sizes, powerful spindle options, and stable linear motion systems to meet diverse production needs.</p>
@@ -1394,14 +1403,14 @@ export const machinesData = [
       You can contact us via phone or email, or fill the inquiry form on the product page. We will provide a detailed quote based on your required machine configuration.</p>
     </div>
   `,
-  specs: ['Spindle: 3.5 kW – 9 kW', 'Accuracy: High Precision'],
-  image: '/images/I-KRAFT CNC Router System.png'
-},
-    {
-        id: 'i-kraft-5-axis-cnc-router--control',
-        name: 'I-KRAFT 5-Axis CNC Router & Control',
-        description: 'High-precision multi-directional machining for complex components.',
-        longDescription: `
+    specs: ['Spindle: 3.5 kW – 9 kW', 'Accuracy: High Precision'],
+    image: '/images/I-KRAFT CNC Router System.png'
+  },
+  {
+    id: 'i-kraft-5-axis-cnc-router--control',
+    name: 'I-KRAFT 5-Axis CNC Router & Control',
+    description: 'High-precision multi-directional machining for complex components.',
+    longDescription: `
         <h3>Overview</h3>
         <p>The i-KRAFT 5-Axis CNC Router and Control Machine is engineered for high-precision, multi-directional machining of complex components. Designed for modern manufacturing environments, it enables simultaneous movement across five axes, delivering superior accuracy, smoother finishes, and reduced setup time.</p>
         <p>Built with a rigid machine structure, advanced CNC control system, and high-performance spindle options, i-KRAFT ensures reliable operation for demanding applications. It is ideal for industries requiring intricate cutting, contouring, drilling, and engraving with consistent repeatability.</p>
@@ -1468,14 +1477,14 @@ export const machinesData = [
         <p><strong>Q6. Does Mech Chem Engineering Services provide installation and support?</strong><br/>Yes, Mech Chem Engineering Services offers professional installation, training, and after-sales support for i-KRAFT CNC machines.</p>
         </div>
     `,
-        specs: ['Axes: 5-Axis Simultaneous', 'Spindle: Up to 24,000 RPM'],
-        image: '/images/I-KRAFT 5-Axis CNC Router & Control.png'
-    },
-    {
-        id: 'i-kraft-3d-statue-maker-machine',
-        name: 'i-KRAFT™ 3D Statue Maker Machine',
-        description: 'Precision CNC Sculpting for Art, Architecture & Custom Creations.',
-        longDescription: `
+    specs: ['Axes: 5-Axis Simultaneous', 'Spindle: Up to 24,000 RPM'],
+    image: '/images/I-KRAFT 5-Axis CNC Router & Control.png'
+  },
+  {
+    id: 'i-kraft-3d-statue-maker-machine',
+    name: 'i-KRAFT™ 3D Statue Maker Machine',
+    description: 'Precision CNC Sculpting for Art, Architecture & Custom Creations.',
+    longDescription: `
     <h3>Overview</h3>
     <p><strong>Precision CNC Sculpting for Art, Architecture & Custom Creations</strong></p>
     <p>The i-KRAFT™ 3D Statue Maker Machine is a high-performance CNC solution designed for accurate, smooth, and detailed 3D carving. i-KRAFT™ is designed for professionals seeking precision and reliability, allowing the creation of statues, idols, sculptures, and intricate 3D forms with exceptional finish and repeatability. Whether working with wood, stone, foam, or soft metals, i-KRAFT™ delivers consistent results for artistic, architectural, and industrial applications.</p>
@@ -1589,14 +1598,14 @@ export const machinesData = [
       You can request pricing by contacting us through the enquiry form, phone, or email. Pricing depends on machine size, axis configuration, and optional features.</p>
     </div>
   `,
-        specs: ['Axis: 3 / 4 Axis', 'Materials: Wood, Stone, POP, Foam'],
-        image: '/images/I-KRAFT 3D Statue Maker Machine.png'
-    },
-    {
-  id: 'i-nax-metal-lathe-machine',
-  name: 'I-NAX Metal Lathe',
-  description: 'Precision Machining Machine Tool - High-performance lathe for precision turning, threading, and shaping of metal components.',
-  longDescription: `
+    specs: ['Axis: 3 / 4 Axis', 'Materials: Wood, Stone, POP, Foam'],
+    image: '/images/I-KRAFT 3D Statue Maker Machine.png'
+  },
+  {
+    id: 'i-nax-metal-lathe-machine',
+    name: 'i-NAX™ Metal Lathe',
+    description: 'Precision Machining Machine Tool - High-performance lathe for precision turning, threading, and shaping of metal components.',
+    longDescription: `
     <h3>Overview</h3>
     <p>The i-NAX Metal Lathe is a high-performance machine tool designed for precision turning, facing, threading, drilling, and shaping of metal components. Built for durability and accuracy, this lathe delivers reliable results in industrial, workshop, and tool room environments.</p>
     
@@ -1681,7 +1690,7 @@ export const machinesData = [
       In manufacturing industries, automotive workshops, tool rooms, fabrication units, and educational institutes.</p>
     </div>
   `,
-  specs: ['Material: Cast Iron Bed', 'Operations: Turning, Threading, Boring'],
-  image: '/images/I-NAX Metal Lathe in Detail.png'
-}
+    specs: ['Material: Cast Iron Bed', 'Operations: Turning, Threading, Boring'],
+    image: '/images/I-NAX Metal Lathe in Detail.png'
+  }
 ];
