@@ -1,7 +1,3 @@
-
-
-
-
 import DropdownMenu from './DropdownMenu'
 import { useState } from 'react'
 import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react'
@@ -30,7 +26,7 @@ const Navbar = () => {
     <>
       <header className="fixed top-0 left-0 w-full z-[999]">
         <nav className="bg-[#f9fafb] shadow-[0_10px_35px_rgba(0,0,0,0.15)] border-b border-gray-200">
-          <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
+          <div className="max-w-7xl mx-auto  flex justify-between items-center h-24">
 
             {/* LOGO */}
             <Link to="/" className="flex items-center group">

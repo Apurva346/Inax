@@ -9,7 +9,7 @@ import Footer from './components/common/Footer';
 import AllMachines from './components/pages/AllMachines';
 import WhyChooseUs from './components/pages/WhyChooseUs';
 import ScrollToTop from './ScrollToTop';
-import TopHeader from './components/common/TopHeader';
+
 
 function App() {
   return (

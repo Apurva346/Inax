@@ -8,7 +8,8 @@ import {
   Cpu,
   Layout,
   CheckCircle,
-  Globe, Handshake
+  Globe,
+  Handshake
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { machinesData } from '../data/machinesData'
@@ -29,7 +30,7 @@ const Inax = () => {
           <div className='absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent'></div>
         </div>
 
-        <div className='max-w-7xl mx-auto px-8 relative z-10 text-white w-full'>
+        <div className='max-w-7xl mx-auto px-4 relative z-10 text-white w-full'>
           {/* Clean Typography like screenshot */}
           <h1 className='text-5xl md:text-7xl font-bold mb-4 tracking-tight leading-[1.1]'>
             i-NAX™ – Built for <br />
@@ -349,7 +350,8 @@ const Inax = () => {
         <div
           className='absolute inset-0 z-0 bg-cover bg-center'
           style={{
-            backgroundImage: "url('/images/Closeup of CNC turning machine.webp')" // तुमची इमेज पाथ इथे द्या
+            backgroundImage:
+              "url('/images/Closeup of CNC turning machine.webp')" // तुमची इमेज पाथ इथे द्या
           }}
         >
           {/* मूळ इमेजसारखा निळसर-काळा ओव्हरले */}
