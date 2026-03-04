@@ -9,6 +9,7 @@ import Footer from './components/common/Footer';
 import AllMachines from './components/pages/AllMachines';
 import WhyChooseUs from './components/pages/WhyChooseUs';
 import ScrollToTop from './ScrollToTop';
+import TopHeader from './components/common/TopHeader';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Navbar /> 
         <ScrollToTop />
         
-        {/* flex-grow मुळे कंटेंट कमी असेल तरी फुटर खालीच राहील */}
+        
         <main className="flex bg-white">
           <Routes>
             
