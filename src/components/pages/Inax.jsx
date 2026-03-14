@@ -19,36 +19,32 @@ const Inax = () => {
     <div className='w-full overflow-hidden bg-white font-sans'>
       {/* SECTION 1: HERO - Ultra Modern Look */}
       <section className='relative h-[600px] w-full flex items-center overflow-hidden bg-[#0f172a]'>
-        {/* Background Image with Screen-accurate Overlay */}
         <div className='absolute inset-0 z-0 w-full h-full'>
           <img
             src='/himages/image3.png'
             className='w-full h-full object-cover opacity-60'
             alt='Modern Industrial CNC'
           />
-          {/* Gradient from left to right - as per screenshot */}
           <div className='absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent'></div>
         </div>
 
         <div className='max-w-7xl mx-auto px-4 relative z-10 text-white w-full'>
-          {/* Clean Typography like screenshot */}
           <h1 className='text-5xl md:text-5xl font-bold mb-4 tracking-tight leading-[1.1]'>
-            i-NAX™ – Laser Cutting Machine & CNC Router Machine Supplier in Nagpur, Maharashtra <br />
+            i-NAX™ – Laser Cutting Machine & CNC Router Machine Supplier in
+            Nagpur, Maharashtra <br />
             <span className='text-white'></span>
           </h1>
 
           <p className='text-lg md:text-xl text-gray-200 max-w-xl mb-10 font-light leading-relaxed'>
-            i-NAX™, powered by Mech Chem Engineering Services, delivers advanced laser cutting machines 
-            and CNC router systems designed for precision, durability, and industrial performance.
-            We supply high-quality fiber laser, co<sub>2</sub> laser, crystal laser, and CNC router machines for 
-            modern manufacturing industries across Maharashtra.
+            i-NAX™, powered by Mech Chem Engineering Services, delivers advanced
+            laser cutting machines and CNC router systems designed for
+            precision, durability, and industrial performance. We supply
+            high-quality fiber laser, co<sub>2</sub> laser, crystal laser, and
+            CNC router machines for modern manufacturing industries across
+            Maharashtra.
           </p>
 
-          {/* Buttons - Yellow & White combination from screenshot */}
           <div className='flex flex-wrap gap-4'>
-            {/* <button className='bg-[#FFB800] hover:bg-yellow-500 text-black font-extrabold px-10 py-4 rounded-md text-xs uppercase tracking-widest transition-all shadow-xl active:scale-95'>
-              Explore Machines
-            </button> */}
             <Link to='/all-machines'>
               <button className='bg-[#FFB800] hover:bg-yellow-500 text-black font-extrabold px-10 py-4 rounded-md text-xs uppercase tracking-widest transition-all shadow-xl active:scale-95'>
                 View Machines
@@ -79,20 +75,21 @@ const Inax = () => {
 
               <div className='relative'>
                 <p className='text-lg text-gray-800 leading-relaxed font-semibold mb-6'>
-                  Founded in 2012, Mech Chem Engineering Services has been delivering reliable industrial machinery and engineering solutions for over a decade.
+                  Founded in 2012, Mech Chem Engineering Services has been
+                  delivering reliable industrial machinery and engineering
+                  solutions for over a decade.
                 </p>
                 <p className='text-lg text-gray-800 leading-relaxed font-semibold mb-6'>
-                  In 2024, we introduced i-NAX™, a premium brand focused on advanced laser cutting machines and CNC router systems designed for modern manufacturing industries.
+                  In 2024, we introduced i-NAX™, a premium brand focused on
+                  advanced laser cutting machines and CNC router systems
+                  designed for modern manufacturing industries.
                 </p>
                 <p className='text-lg text-gray-800 leading-relaxed font-semibold mb-6'>
-                  With a strong commitment to precision, durability, and industrial performance, our machines help businesses improve productivity across metal fabrication, signage production, woodworking, and manufacturing sectors.
+                  With a strong commitment to precision, durability, and
+                  industrial performance, our machines help businesses improve
+                  productivity across metal fabrication, signage production,
+                  woodworking, and manufacturing sectors.
                 </p>
-                {/* <p className='text-md text-gray-500 leading-relaxed'>
-                  In 2024, we evolved into <strong>i-NAX™</strong>, a premium
-                  brand representing our commitment to modern
-                  manufacturing—delivering unmatched accuracy and engineering
-                  excellence across the globe.
-                </p> */}
               </div>
 
               <div className='bg-gray-50 p-8 rounded-tr-[50px] rounded-bl-[50px] border-l-8 border-red-700 shadow-sm flex items-start gap-4'>
@@ -103,7 +100,6 @@ const Inax = () => {
                 </p>
               </div>
 
-              {/* --- नवीन READ MORE बटण येथे जोडले आहे --- */}
               <div className='pt-4'>
                 <Link to='/about'>
                   <button className='uppercase group flex items-center gap-3 bg-[#0f172a] hover:bg-red-700 text-white px-8 py-4 rounded-md font-bold transition-all duration-300 shadow-lg shadow-blue-900/20 active:scale-95 text-xs tracking-widest'>
@@ -115,10 +111,8 @@ const Inax = () => {
                   </button>
                 </Link>
               </div>
-              {/* ------------------------------------------ */}
             </div>
 
-            {/* Interactive Timeline */}
             <div className='flex-1 w-full'>
               <div className='relative flex flex-col space-y-8'>
                 <div className='absolute left-[31px] top-0 bottom-0 w-1 bg-gray-100'></div>
@@ -208,7 +202,6 @@ const Inax = () => {
                   ))}
                 </div>
 
-                {/* --- नवीन READ MORE बटण येथे जोडले आहे --- */}
                 <div className='pt-8'>
                   <Link to='/about'>
                     <button className='group flex items-center gap-4 bg-white text-[#0f172a] hover:bg-red-700 hover:text-white px-8 py-4 rounded-sm font-black transition-all duration-300 uppercase text-xs tracking-[0.2em] shadow-xl'>
@@ -220,7 +213,6 @@ const Inax = () => {
                     </button>
                   </Link>
                 </div>
-                {/* ------------------------------------------ */}
               </div>
             </div>
 
@@ -334,7 +326,6 @@ const Inax = () => {
                     </p>
 
                     <div className='mt-auto pt-6'>
-                      {/* Dynamic Route Path using machine.id */}
                       <Link
                         to={`/machine/${machine.id}`}
                         onClick={() => window.scrollTo(0, 0)}
@@ -351,13 +342,10 @@ const Inax = () => {
         </div>
       </section>
 
-      
-
       {/* SECTION 6: WHY CHOOSE I-NAX (Modern Diagram Style) */}
 
       <section className='py-12 bg-[#f8fafc] w-full overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4'>
-          {/* Section Header */}
           <div className='text-center mb-20'>
             <span className='text-red-700 font-bold tracking-[0.3em] uppercase text-xs'>
               Innovation Excellence
@@ -369,7 +357,6 @@ const Inax = () => {
           </div>
 
           <div className='flex flex-col lg:flex-row items-center gap-16 relative'>
-            {/* Left Side Features */}
             <div className='flex-1 w-full space-y-6 z-10'>
               {[
                 {
@@ -404,9 +391,7 @@ const Inax = () => {
               ))}
             </div>
 
-            {/* Center Image with Decorative Rings */}
             <div className='flex-1 relative flex justify-center items-center'>
-              {/* Animated Background Rings */}
               <div className='absolute w-[120%] h-[120%] border border-red-100 rounded-full animate-[spin_20s_linear_infinite] opacity-50'></div>
               <div className='absolute w-[140%] h-[140%] border border-slate-200 rounded-full animate-[spin_30s_linear_infinite_reverse] opacity-30'></div>
 
@@ -421,7 +406,6 @@ const Inax = () => {
                   <div className='absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-60'></div>
                 </div>
 
-                {/* Floating Badge */}
                 <div className='absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-8 py-3 rounded-full shadow-xl border border-slate-100'>
                   <span className='text-[#0f172a] font-black text-xl italic tracking-tighter'>
                     i-NAX<span className='text-red-700'>™</span>
@@ -430,7 +414,6 @@ const Inax = () => {
               </div>
             </div>
 
-            {/* Right Side Features */}
             <div className='flex-1 w-full space-y-6 z-10'>
               {[
                 {
@@ -470,7 +453,6 @@ const Inax = () => {
       {/* SECTION 7: TRUST - Dark Grid */}
       <section className='py-20 bg-[#0f172a] w-full border-t border-white/5'>
         <div className='max-w-7xl mx-auto px-6'>
-          {/* Title Section - Adjusted for Dark Theme */}
           <div className='mb-12 border-l-4 border-red-700 pl-4'>
             <h2 className='text-3xl md:text-4xl font-black  tracking-tighter text-white'>
               WHY MANUFACTURES{' '}
@@ -483,7 +465,6 @@ const Inax = () => {
 
           {/* Compact 4-Column Feature Grid - Dark Cards */}
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {/* Precision */}
             <div className='flex items-center gap-4 bg-white/5 p-6 rounded-xl border border-white/10 hover:bg-white/10 transition-all group'>
               <div className='bg-red-700/20 p-3 rounded-lg text-red-600 shrink-0 group-hover:bg-red-700 group-hover:text-white transition-all'>
                 <Settings size={24} strokeWidth={2.5} />
@@ -631,6 +612,156 @@ const Inax = () => {
           </div>
         </div>
       </section>
+      {/* 4️⃣ Applications Section */}
+      <section className='py-20 px-4 bg-white'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='mb-12'>
+            <h2 className='text-3xl md:text-4xl font-black text-slate-900 mb-4 uppercase'>
+              Applications of Laser Cutting & CNC Machines
+            </h2>
+            <p className='text-gray-600 text-lg'>
+              Our machines are widely used across multiple industries.
+            </p>
+            <div className='w-20 h-1.5 bg-red-700 mt-4'></div>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {[
+              'Sheet metal fabrication',
+              'Stainless steel cutting',
+              'Mild steel cutting',
+              'Industrial manufacturing',
+              'Woodworking and furniture production',
+              'Advertising and signage manufacturing',
+              'Decorative panel cutting',
+              'Engineering components'
+            ].map((item, index) => (
+              <div
+                key={index}
+                className='flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-red-200 transition-colors'
+              >
+                <div className='w-2 h-2 bg-red-700 rounded-full'></div>
+                <span className='font-bold text-slate-800 text-sm uppercase'>
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6️⃣ Industries We Serve */}
+      <section className='py-20 px-4 bg-slate-50'>
+        <div className='max-w-7xl mx-auto'>
+          <h2 className='text-3xl md:text-4xl font-black text-slate-900 mb-12 text-center uppercase'>
+            Industries Using Our Machines
+          </h2>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {[
+              {
+                title: 'Metal Fabrication',
+                desc: 'Advanced solutions for metal processing units.'
+              },
+              {
+                title: 'Automobile',
+                desc: 'Precision components for the automotive sector.'
+              },
+              {
+                title: 'Sheet Metal',
+                desc: 'Robust machines for diverse sheet metal needs.'
+              },
+              {
+                title: 'Furniture & Interior',
+                desc: 'Expert woodworking and interior design tools.'
+              },
+              {
+                title: 'Advertising',
+                desc: 'High-quality signage and display manufacturing.'
+              },
+              {
+                title: 'Engineering',
+                desc: 'Versatile support for general engineering workshops.'
+              }
+            ].map((industry, index) => (
+              <div
+                key={index}
+                className='bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all'
+              >
+                <h3 className='text-xl font-black text-red-700 mb-3 uppercase'>
+                  {industry.title}
+                </h3>
+                <p className='text-gray-600'>{industry.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7️⃣ Service & Support */}
+      <section className='py-20 px-4 bg-white'>
+        <div className='max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12'>
+          <div className='lg:w-1/2'>
+            <h2 className='text-3xl md:text-4xl font-black text-slate-900 mb-6 uppercase leading-tight'>
+              Reliable Service and <br />
+              <span className='text-red-700'>Technical Support</span>
+            </h2>
+            <p className='text-gray-600 text-lg leading-relaxed'>
+              At <strong>i-NAX™</strong>, we believe that strong after-sales
+              support is essential for industrial success. Our technical team
+              provides installation assistance, machine training, and ongoing
+              support to ensure smooth operations for your production line.
+            </p>
+          </div>
+          <div className='lg:w-1/2 bg-slate-900 p-10 rounded-3xl text-white'>
+            <div className='space-y-6'>
+              <div className='flex gap-4 items-start'>
+                <div className='bg-red-700 p-2 rounded-lg'>✓</div>
+                <p className='font-bold uppercase tracking-wide'>
+                  Expert Installation Assistance
+                </p>
+              </div>
+              <div className='flex gap-4 items-start'>
+                <div className='bg-red-700 p-2 rounded-lg'>✓</div>
+                <p className='font-bold uppercase tracking-wide'>
+                  Professional Machine Training
+                </p>
+              </div>
+              <div className='flex gap-4 items-start'>
+                <div className='bg-red-700 p-2 rounded-lg'>✓</div>
+                <p className='font-bold uppercase tracking-wide'>
+                  Ongoing Technical Consultation
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8️⃣ Call to Action */}
+      <section className='py-20 px-4 bg-red-700 text-white text-center'>
+        <div className='max-w-4xl mx-auto'>
+          <h2 className='text-3xl md:text-5xl font-black mb-6 uppercase italic'>
+            Upgrade Your Manufacturing with i-NAX™ Machines
+          </h2>
+          <p className='text-xl mb-10 text-white/90 font-medium'>
+            Looking for high-performance laser cutting machines or CNC router
+            systems? Our experts can help you choose the right machine for your
+            industrial needs.
+          </p>
+          <div className='flex flex-col sm:flex-row justify-center gap-4'>
+            <button className='bg-slate-900 text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-xl'>
+              Contact Us Today
+            </button>
+            <button className='bg-white text-red-700 px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all'>
+              Get Pricing
+            </button>
+          </div>
+          <p className='mt-8 text-sm uppercase tracking-widest font-bold text-white/70'>
+            Machine details • Pricing • Technical Consultation
+          </p>
+        </div>
+      </section>
     </div>
   )
 }
@@ -672,3 +803,82 @@ const FeatureBox = ({ Icon, title, desc }) => (
 )
 
 export default Inax
+
+// {/* <section className='relative min-h-[450px] flex items-center justify-center overflow-hidden py-16'>
+//         {/* Background Image with Dark Industrial Overlay */}
+//         <div
+//           className='absolute inset-0 z-0 bg-cover bg-center'
+//           style={{
+//             backgroundImage:
+//               "url('/images/Closeup of CNC turning machine.webp')" // तुमची इमेज पाथ इथे द्या
+//           }}
+//         >
+//           {/* मूळ इमेजसारखा निळसर-काळा ओव्हरले */}
+//           <div className='absolute inset-0 bg-slate-950/85 backdrop-blur-[1px]'></div>
+//         </div>
+
+//         <div className='max-w-7xl mx-auto px-6 relative z-10 w-full text-center'>
+//           {/* Top Tagline */}
+//           <div className='mb-16'>
+//             <h2 className='text-2xl md:text-4xl font-bold text-white tracking-tight'>
+//               Trusted Engineering. Proven Performance.
+//             </h2>
+//             <div className='h-0.5 w-40 bg-red-700 mx-auto mt-4 shadow-[0_0_15px_rgba(185,28,28,0.5)]'></div>
+//           </div>
+
+//           {/* Stats Grid - Glassmorphism Effect */}
+//           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-y border-white/10 bg-white/[0.03] backdrop-blur-md'>
+//             {/* 1. Years Experience */}
+//             <div className='p-10 flex flex-col items-center justify-center border-white/5 lg:border-r group hover:bg-white/5 transition-colors'>
+//               <span className='text-5xl font-black text-white mb-2 tracking-tighter group-hover:scale-105 transition-transform'>
+//                 10+
+//               </span>
+//               <h3 className='text-[13px] font-black uppercase tracking-widest text-white leading-tight mb-2'>
+//                 Years Engineering Experience
+//               </h3>
+//               <p className='text-[11px] italic font-medium text-gray-400 tracking-wider'>
+//                 A Decade of Excellence
+//               </p>
+//             </div>
+
+//             {/* 2. Installations */}
+//             <div className='p-10 flex flex-col items-center justify-center border-white/5 md:border-r group hover:bg-white/5 transition-colors'>
+//               <span className='text-5xl font-black text-white mb-2 tracking-tighter group-hover:scale-105 transition-transform'>
+//                 500+
+//               </span>
+//               <h3 className='text-[13px] font-black uppercase tracking-widest text-white leading-tight mb-2'>
+//                 Installations Worldwide
+//               </h3>
+//               <p className='text-[11px] italic font-medium text-gray-400 tracking-wider'>
+//                 Across Diverse Industries
+//               </p>
+//             </div>
+
+//             {/* 3. After-Sales Support */}
+//             <div className='p-10 flex flex-col items-center justify-center border-white/5 lg:border-r group hover:bg-white/5 transition-colors'>
+//               <div className='mb-3 text-gray-300 group-hover:scale-110 transition-transform duration-300'>
+//                 <Settings size={48} strokeWidth={1.5} />
+//               </div>
+//               <h3 className='text-[13px] font-black uppercase tracking-widest text-white leading-tight mb-2'>
+//                 Reliable After-Sales Support
+//               </h3>
+//               <p className='text-[11px] italic font-medium text-gray-400 tracking-wider'>
+//                 Committed Service & Care
+//               </p>
+//             </div>
+
+//             {/* 4. Manufacturing Partner */}
+//             <div className='p-10 flex flex-col items-center justify-center group hover:bg-white/5 transition-colors'>
+//               <div className='mb-3 text-gray-300 group-hover:scale-110 transition-transform duration-300'>
+//                 <Handshake size={48} strokeWidth={1.5} />
+//               </div>
+//               <h3 className='text-[13px] font-black uppercase tracking-widest text-white leading-tight mb-2'>
+//                 Trusted Manufacturing Partner
+//               </h3>
+//               <p className='text-[11px] italic font-medium text-gray-400 tracking-wider'>
+//                 Your Success, Our Mission
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </section> */}
