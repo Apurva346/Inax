@@ -74,17 +74,17 @@ const Inax = () => {
               </div>
 
               <div className='relative'>
-                <p className='text-lg text-gray-800 leading-relaxed font-semibold mb-6'>
+                <p className='text-lg text-gray-600 leading-relaxed font-semibold mb-6'>
                   Founded in 2012, Mech Chem Engineering Services has been
                   delivering reliable industrial machinery and engineering
                   solutions for over a decade.
                 </p>
-                <p className='text-lg text-gray-800 leading-relaxed font-semibold mb-6'>
+                <p className='text-lg text-gray-600 leading-relaxed font-semibold mb-6'>
                   In 2024, we introduced i-NAX™, a premium brand focused on
                   advanced laser cutting machines and CNC router systems
                   designed for modern manufacturing industries.
                 </p>
-                <p className='text-lg text-gray-800 leading-relaxed font-semibold mb-6'>
+                <p className='text-lg text-gray-600 leading-relaxed font-semibold mb-6'>
                   With a strong commitment to precision, durability, and
                   industrial performance, our machines help businesses improve
                   productivity across metal fabrication, signage production,
@@ -100,7 +100,7 @@ const Inax = () => {
                 </p>
               </div>
 
-              <div className='pt-4'>
+              {/* <div className='pt-4'>
                 <Link to='/about'>
                   <button className='uppercase group flex items-center gap-3 bg-[#0f172a] hover:bg-red-700 text-white px-8 py-4 rounded-md font-bold transition-all duration-300 shadow-lg shadow-blue-900/20 active:scale-95 text-xs tracking-widest'>
                     Read Full Story
@@ -110,7 +110,7 @@ const Inax = () => {
                     />
                   </button>
                 </Link>
-              </div>
+              </div> */}
             </div>
 
             <div className='flex-1 w-full'>
@@ -156,8 +156,21 @@ const Inax = () => {
                         {item.desc}
                       </p>
                     </div>
+                    
                   </div>
+                  
                 ))}
+              </div>
+              <div className='pt-35'>
+                <Link to='/about'>
+                  <button className='uppercase group flex items-center gap-3 bg-[#0f172a] hover:bg-red-700 text-white px-8 py-4 rounded-md font-bold transition-all duration-300 shadow-lg shadow-blue-900/20 active:scale-95 text-xs tracking-widest'>
+                    Read Full Story
+                    <ArrowRight
+                      size={18}
+                      className='group-hover:translate-x-2 transition-transform'
+                    />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -741,8 +754,8 @@ const Inax = () => {
       {/* 8️⃣ Call to Action */}
       <section className='py-20 px-4 bg-red-700 text-white text-center'>
         <div className='max-w-4xl mx-auto'>
-          <h2 className='text-3xl md:text-5xl font-black mb-6 uppercase italic'>
-            Upgrade Your Manufacturing with i-NAX™ Machines
+          <h2 className='text-3xl md:text-5xl font-black mb-6 italic'>
+            Upgrade Your Manufacturing with <br></br>i-NAX™ Machines
           </h2>
           <p className='text-xl mb-10 text-white/90 font-medium'>
             Looking for high-performance laser cutting machines or CNC router
