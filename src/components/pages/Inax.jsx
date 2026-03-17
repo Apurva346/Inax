@@ -752,7 +752,7 @@ const Inax = () => {
       </section>
 
       {/* 8️⃣ Call to Action */}
-      <section className='py-20 px-4 bg-red-700 text-white text-center'>
+      <section className='py-20 px-4 bg-slate-900 text-white text-center'>
         <div className='max-w-4xl mx-auto'>
           <h2 className='text-3xl md:text-5xl font-black mb-6 italic'>
             Upgrade Your Manufacturing with <br></br>i-NAX™ Machines
@@ -763,12 +763,14 @@ const Inax = () => {
             industrial needs.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4'>
-            <button className='bg-slate-900 text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-xl'>
-              Contact Us Today
-            </button>
-            <button className='bg-white text-red-700 px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all'>
+            <Link to='/contact' onClick={() => window.scrollTo(0, 0)}>
+              <button className='bg-red-500 text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-xl'>
+                Contact Us Today
+              </button>
+            </Link>  
+            {/* <button className='bg-white text-red-700 px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all'>
               Get Pricing
-            </button>
+            </button> */}
           </div>
           <p className='mt-8 text-sm uppercase tracking-widest font-bold text-white/70'>
             Machine details • Pricing • Technical Consultation
