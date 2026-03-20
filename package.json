@@ -6,8 +6,8 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "vite",
-    "build": "node sitemap-generator.js && vite build",
-    "sitemap": "node sitemap-generator.js",
+    "build": "vite build",
+    
     "lint": "eslint .",
     "preview": "vite preview"
   },
