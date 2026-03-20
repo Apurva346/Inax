@@ -1,6 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://inax.mechchemindia.com/</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://inax.mechchemindia.com/about</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://inax.mechchemindia.com/contact</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://inax.mechchemindia.com/all-machines</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://inax.mechchemindia.com/why-choose-us</loc>
+    <lastmod>2024-05-22</lastmod>
+    <priority>0.70</priority>
   </url>
 </urlset>
