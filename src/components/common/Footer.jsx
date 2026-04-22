@@ -5,8 +5,13 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const socialLinks = [
-    { Icon: Facebook, link: "https://facebook.com" },
-    { Icon: Instagram, link: "https://instagram.com" }
+    // { Icon: Facebook, link: "https://facebook.com" },
+    // { Icon: Instagram, link: "https://instagram.com" }
+
+    { Icon: Facebook, link: 'https://www.facebook.com/inaxlaser' },
+    // { Icon: X, link: 'https://x.com' },
+    { Icon: Youtube, link: 'https://www.youtube.com/@inaxlaser' },
+    { Icon: Instagram, link: 'https://www.instagram.com/mechchemengineeringservices' }
   ];
 
   // तुमचा मूळ मशिन डेटा (Original List)
