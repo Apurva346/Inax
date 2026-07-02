@@ -1,164 +1,330 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { machinesData } from '../data/machinesData';
-// // तुमच्या प्रोजेक्टमधील डेटा फाईलचा अचूक पाथ तपासा
+// import React, { useState } from 'react'
+// import { Link } from 'react-router-dom'
+// import { machinesData } from '../data/machinesData'
+// import { ChevronDown, ChevronRight } from 'lucide-react'
 
 // const AllMachines = () => {
+//   // १. मशिन्सचा फ्लॅट ॲरे (हा फंक्शन तसाच ठेवला आहे जेणेकरून कुठे एरर येणार नाही)
+//   const getAllMachines = () => {
+//     let allItems = [];
+//     Object.keys(machinesData).forEach(categoryKey => {
+//       const category = machinesData[categoryKey];
+//       if (category.items && Array.isArray(category.items)) {
+//         allItems = [...allItems, ...category.items];
+//       }
+//       if (category.subcategories) {
+//         Object.keys(category.subcategories).forEach(subKey => {
+//           const subcategory = category.subcategories[subKey];
+//           if (subcategory.items && Array.isArray(subcategory.items)) {
+//             allItems = [...allItems, ...subcategory.items];
+//           }
+//         });
+//       }
+//     });
+//     return allItems;
+//   };
+
+//   // २. साईडबारमधील कॅटेगरीज मॅनेज करण्यासाठी स्टेट (No Change)
+//   const [openCategories, setOpenCategories] = useState({
+//     'laser-machines': true,
+//   });
+
+//   const toggleCategory = (key) => {
+//     setOpenCategories(prev => ({
+//       ...prev,
+//       [key]: !prev[key]
+//     }));
+//   };
+
 //   return (
-//     <div className="bg-slate-50 min-h-screen py-16">
-//       <div className="container mx-auto px-4 md:px-10 lg:px-20">
+//     <div className='bg-slate-50 min-h-screen'>
+//       <div className='flex flex-col lg:flex-row min-h-screen relative'>
+        
+//         {/* LEFT SIDEBAR (No Change - तुमचा ओरिजिनल लुक) */}
+//         <aside className='lg:w-80 bg-[#1f2937] text-white lg:sticky lg:top-0 lg:h-screen overflow-y-auto border-r border-white/10 z-40'>
+//           <div className='p-6'>
+//             <h2 className='text-sm font-black uppercase tracking-[0.2em] mb-6 border-b border-white/10 pb-3 text-gray-400'>
+//               Machine Categories
+//             </h2>
 
-//         {/* Header Section */}
-//         <div className="max-w-3xl mx-auto text-center mb-16">
-//           <h2 className="text-red-700 font-bold tracking-[5px] uppercase text-[12px] mb-3">
-//             Premium Engineering Solutions
-//           </h2>
-//           <h1 className="text-4xl md:text-5xl font-black text-gray-900 uppercase leading-tight">
-//             Our <span className="text-red-700">Machine</span> Collection
-//           </h1>
-//           <div className="flex justify-center mt-6">
-//             <span className="w-20 h-1.5 bg-red-700 rounded-full"></span>
-//             <span className="w-4 h-1.5 bg-gray-900 rounded-full ml-2"></span>
+//             <div className='space-y-3'>
+//               {Object.keys(machinesData).map(categoryKey => {
+//                 const category = machinesData[categoryKey];
+//                 const isOpen = openCategories[categoryKey];
+                
+//                 const machineItems = category.items || 
+//                   (category.subcategories ? Object.values(category.subcategories).flatMap(sub => sub.items || []) : []);
+
+//                 if (machineItems.length === 0) return null;
+
+//                 return (
+//                   <div key={categoryKey} className='border-b border-white/5 pb-2 last:border-0'>
+//                     <button
+//                       onClick={() => toggleCategory(categoryKey)}
+//                       className='flex items-center justify-between w-full px-2 py-2 text-left text-[12px] font-black uppercase tracking-wider text-gray-300 hover:text-white transition-colors group'
+//                     >
+//                       <span className='group-hover:translate-x-1 transition-transform duration-200'>
+//                         {category.title || category.name}
+//                       </span>
+//                       {isOpen ? (
+//                         <ChevronDown size={16} className='text-red-500' />
+//                       ) : (
+//                         <ChevronRight size={16} className='text-gray-500 group-hover:text-gray-300' />
+//                       )}
+//                     </button>
+
+//                     {isOpen && (
+//                       <ul className='mt-1 ml-3 pl-2 border-l border-red-600/30 space-y-1'>
+//                         {machineItems.map(machine => (
+//                           <li key={machine.id}>
+//                             <Link
+//                               to={`/machine/${machine.id}`}
+//                               className='group flex items-center gap-2 px-2 py-1.5 rounded hover:bg-white/5 transition-all duration-150'
+//                             >
+//                               <div className='w-1 h-1 bg-red-600 rounded-full group-hover:scale-150 transition-transform'></div>
+//                               <span className='text-[11px] font-semibold text-gray-400 group-hover:text-white uppercase tracking-wide truncate'>
+//                                 {machine.name}
+//                               </span>
+//                             </Link>
+//                           </li>
+//                         ))}
+//                       </ul>
+//                     )}
+//                   </div>
+//                 );
+//               })}
+//             </div>
 //           </div>
-//         </div>
+//         </aside>
 
-//         {/* Machine Cards Grid - Responsive (1, 2, or 3 columns) */}
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-//           {machinesData.map((machine) => (
-//             <div
-//               key={machine.id}
-//               className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500 border border-gray-100 flex flex-col h-full"
-//             >
-//               {/* Image Box */}
-//               <div className="relative h-64 overflow-hidden bg-gray-50 flex items-center justify-center p-6">
-//                 <img
-//                   src={machine.image}
-//                   alt={machine.name}
-//                   className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-700 ease-in-out"
-//                 />
-//                 {/* Product Badge */}
-//                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">
-//                   <span className="text-red-700 text-[9px] font-black uppercase tracking-widest">i-NAX Tech</span>
-//                 </div>
-//               </div>
+//         {/* RIGHT CONTENT AREA - न्यू कॅटेगरी वाईज डिझाइन */}
+//         <main className='flex-1 bg-white'>
+//           <div className='py-16 px-6 md:px-12 lg:px-16'>
+            
+//             {/* Page Main Header */}
+//             <div className='mb-20'>
+//               <h2 className='text-red-700 font-bold tracking-[5px] uppercase text-[12px] mb-3'>
+//                 Industrial Precision
+//               </h2>
+//               <h1 className='text-4xl md:text-6xl font-black text-[#0f172a] uppercase tracking-tighter leading-none'>
+//                 i-NAX <br />{' '}
+//                 <span className='text-gray-300'>Engineering Collection</span>
+//               </h1>
+//               <div className='w-24 h-2 bg-red-700 mt-6'></div>
+//             </div>
 
-//               {/* Text Details Box */}
-//               <div className="p-8 flex flex-col flex-grow">
-//                 <h3 className="text-xl font-extrabold text-gray-900 mb-3 group-hover:text-red-700 transition-colors duration-300 min-h-[56px] flex items-center">
-//                   {machine.name}
+//             {/* मुख्य बदल: डेटा थेट एकत्र न दाखवता कॅटेगरी वाईज लूप केला आहे */}
+//             <div className='space-y-24'>
+//               {Object.keys(machinesData).map(categoryKey => {
+//                 const category = machinesData[categoryKey];
+                
+//                 // प्रत्येक कॅटेगरीमधील मशिन्स काढणे
+//                 const machineItems = category.items || 
+//                   (category.subcategories ? Object.values(category.subcategories).flatMap(sub => sub.items || []) : []);
+
+//                 // जर कॅटेगरीमध्ये मशिन्स नसतील तर तो सेक्शन दाखवू नका
+//                 if (machineItems.length === 0) return null;
+
+//                 return (
+//                   <div key={categoryKey} className='border-b border-gray-100 pb-16 last:border-0 last:pb-0'>
+                    
+//                     {/* लहान कॅटेगरी हेडिंग आणि लाईन */}
+//                     <div className='flex items-center gap-4 mb-10'>
+//                       <h2 className='text-4xl font-black text-red-900 uppercase tracking-tight whitespace-nowrap'>
+//                         {category.title || category.name}
+//                       </h2>
+//                       <div className='w-full h-[1px] bg-gray-200'></div>
+//                     </div>
+
+//                     {/* त्या विशिष्ट कॅटेगरीची मशिन्स ग्रिड */}
+//                     <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-10'>
+//                       {machineItems.map(machine => (
+//                         <div
+//                           key={machine.id}
+//                           className='group relative bg-[#f8fafc] rounded-3xl overflow-hidden border border-gray-100 flex flex-col h-full hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-500'
+//                         >
+//                           {/* Image Box */}
+//                           <div className='relative h-72 overflow-hidden flex items-center justify-center p-10 bg-white group-hover:bg-gray-50 transition-colors duration-500'>
+//                             <img
+//                               src={machine.image}
+//                               alt={machine.name}
+//                               className='max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-700 ease-in-out'
+//                             />
+//                             <div className='absolute top-6 left-6'>
+//                               <span className='bg-[#0f172a] text-white text-[8px] font-black px-3 py-1 uppercase tracking-widest'>
+//                                 Premium
+//                               </span>
+//                             </div>
+//                           </div>
+
+//                           {/* Details Box */}
+//                           <div className='p-8 flex flex-col flex-grow'>
+//                             <h3 className='text-2xl font-black text-[#0f172a] mb-4 uppercase tracking-tighter group-hover:text-red-700 transition-colors leading-tight'>
+//                               {machine.name}
+//                             </h3>
+//                             <p className='text-gray-500 text-sm leading-relaxed mb-8 line-clamp-2 font-medium'>
+//                               {machine.description}
+//                             </p>
+
+//                             <div className='mt-auto'>
+//                               <Link
+//                                 to={`/machine/${machine.id}`}
+//                                 className='group/btn flex items-center justify-between w-full p-5 bg-[#0f172a] hover:bg-red-700 text-white rounded-xl transition-all duration-300 shadow-xl'
+//                               >
+//                                 <span className='text-[10px] font-black uppercase tracking-[0.2em]'>
+//                                   Explore Machine
+//                                 </span>
+//                                 <div className='w-8 h-8 bg-white/10 rounded-full flex items-center justify-center group-hover/btn:bg-white group-hover/btn:text-red-700 transition-all'>
+//                                   <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+//                                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='3' d='M14 5l7 7m0 0l-7 7m7-7H3'></path>
+//                                   </svg>
+//                                 </div>
+//                               </Link>
+//                             </div>
+//                           </div>
+//                         </div>
+//                       ))}
+//                     </div>
+//                   </div>
+//                 );
+//               })}
+//             </div>
+
+//             {/* Simple Contact Footer */}
+//             <div className='mt-24 border-t border-gray-100 pt-16 flex flex-col md:flex-row justify-between items-center gap-8'>
+//               <div>
+//                 <h3 className='text-2xl font-black text-[#0f172a] uppercase tracking-tighter'>
+//                   Looking for more?
 //                 </h3>
-
-//                 <p className="text-gray-500 text-sm leading-relaxed mb-8 line-clamp-3">
-//                   {machine.description}
+//                 <p className='text-gray-500 font-medium'>
+//                   Get in touch for custom industrial designs.
 //                 </p>
-
-//                 {/* Button - Bottom Aligned */}
-//                 <div className="mt-auto">
-//                   <Link
-//                     to={`/machine/${machine.id}`}
-//                     className="flex items-center justify-center w-full py-4 bg-gray-900 text-white text-[11px] font-bold uppercase tracking-[2px] rounded-2xl hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-red-200"
-//                   >
-//                     View Full Details
-//                     <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-//                     </svg>
-//                   </Link>
-//                 </div>
 //               </div>
+//               <Link
+//                 to='/contact'
+//                 className='bg-[#0f172a] text-white px-12 py-5 rounded-full font-black uppercase text-[11px] tracking-widest hover:bg-red-700 transition-all active:scale-95'
+//               >
+//                 Contact Specialist
+//               </Link>
 //             </div>
-//           ))}
-//         </div>
 
-//         {/* Bottom Contact CTA (Optional) */}
-//         <div className="mt-20 bg-gray-900 rounded-[2rem] p-10 md:p-16 text-center text-white relative overflow-hidden">
-//             <div className="relative z-10">
-//                 <h3 className="text-2xl md:text-3xl font-bold mb-4">Need a Customized Machining Solution?</h3>
-//                 <p className="text-gray-400 mb-8 max-w-xl mx-auto text-sm">Our experts help you select the right machine for your production needs.</p>
-//                 <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="inline-block bg-red-700 hover:bg-red-600 text-white px-10 py-4 rounded-full font-bold uppercase text-[12px] tracking-widest transition-all">
-//                     Contact Us Now
-//                 </Link>
-//             </div>
-//             {/* Background Decor */}
-//             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-red-700/10 rounded-full blur-3xl"></div>
-//         </div>
-
+//           </div>
+//         </main>
 //       </div>
 //     </div>
-//   );
-// };
+//   )
+// }
 
-// export default AllMachines;
+// export default AllMachines
 
-import React from 'react'
+
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { machinesData } from '../data/machinesData'
+import { ChevronDown, ChevronRight } from 'lucide-react'
 
 const AllMachines = () => {
+  
+  const getAllMachines = () => {
+    let allItems = [];
+    Object.keys(machinesData).forEach(categoryKey => {
+      const category = machinesData[categoryKey];
+      if (category.items && Array.isArray(category.items)) {
+        allItems = [...allItems, ...category.items];
+      }
+      if (category.subcategories) {
+        Object.keys(category.subcategories).forEach(subKey => {
+          const subcategory = category.subcategories[subKey];
+          if (subcategory.items && Array.isArray(subcategory.items)) {
+            allItems = [...allItems, ...subcategory.items];
+          }
+        });
+      }
+    });
+    return allItems;
+  };
+
+  // २. साईडबारमधील कॅटेगरीज मॅनेज करण्यासाठी स्टेट (No Change)
+  const [openCategories, setOpenCategories] = useState({
+    'laser-machines': true,
+  });
+
+  const toggleCategory = (key) => {
+    setOpenCategories(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
   return (
     <div className='bg-slate-50 min-h-screen'>
-      {/* Main Layout Container - No gap for Sidebar */}
-      <div className='flex flex-col lg:flex-row min-h-screen relative'>
-        {/* LEFT SIDEBAR - Dark Theme, Top to Bottom */}
+      {/* फिक्स १: items-start जोडले आहे, ज्यामुळे साईडबार फुटर येताच थांबेल आणि खाली जाणार नाही */}
+      <div className='flex flex-col lg:flex-row min-h-screen relative items-start'>
         
-
-        <aside className='lg:w-72 bg-[#1f2937]
- text-gray-800
- lg:sticky lg:top-0 lg:h-screen overflow-y-auto border-r border-white/10 z-40'>
+        {/* LEFT SIDEBAR - FULLY STICKY */}
+        {/* फिक्स २: w-full lg:w-80 सोबत lg:h-screen आणि overflow-y-auto दिला आहे जेणेकरून स्क्रोलिंग जागेवरच होईल */}
+        <aside className='w-full lg:w-80 bg-[#1f2937] text-white lg:sticky lg:top-0 lg:h-screen overflow-y-auto border-r border-white/10 z-40 shrink-0'>
           <div className='p-6'>
-            {/* HEADER */}
-            {/* <h3 className='text-red-600 font-semibold uppercase text-[11px] tracking-[0.25em] mb-1'>
-              Catalog
-            </h3> */}
-
-            <h2 className='text-lg font-bold uppercase tracking-tight mb-6 border-b border-white/10 pb-3'>
-               <span className='text-gray-400'>Machine List</span>
+            <h2 className='text-sm font-black uppercase tracking-[0.2em] mb-6 border-b border-white/10 pb-3 text-gray-400'>
+              Machine Categories
             </h2>
 
-            {/* MACHINE LIST */}
-            <ul className='space-y-1'>
-              {machinesData.map(machine => (
-                <li key={machine.id}>
-                  <Link
-                    to={`/machine/${machine.id}`}
-                    className='group flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-white/5 transition-all duration-200'
-                  >
-                    <div className='w-1.5 h-1.5 bg-red-600 rounded-full group-hover:scale-125 transition-transform'></div>
+            <div className='space-y-3'>
+              {Object.keys(machinesData).map(categoryKey => {
+                const category = machinesData[categoryKey];
+                const isOpen = openCategories[categoryKey];
+                
+                const machineItems = category.items || 
+                  (category.subcategories ? Object.values(category.subcategories).flatMap(sub => sub.items || []) : []);
 
-                    <span className='text-[12px] font-medium text-gray-300 group-hover:text-white uppercase tracking-wide truncate transition-colors'>
-                      {machine.name}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                if (machineItems.length === 0) return null;
 
-            {/* SUPPORT CARD (COMPACT VERSION) */}
-            {/* <div className='mt-8 p-4 bg-white/5 border border-white/10 rounded-xl'>
-              <p className='text-red-500 text-[10px] font-semibold uppercase tracking-widest mb-1'>
-                Support
-              </p>
+                return (
+                  <div key={categoryKey} className='border-b border-white/5 pb-2 last:border-0'>
+                    <button
+                      onClick={() => toggleCategory(categoryKey)}
+                      className='flex items-center justify-between w-full px-2 py-2 text-left text-[12px] font-black uppercase tracking-wider text-gray-300 hover:text-white transition-colors group'
+                    >
+                      <span className='group-hover:translate-x-1 transition-transform duration-200'>
+                        {category.title || category.name}
+                      </span>
+                      {isOpen ? (
+                        <ChevronDown size={16} className='text-red-500' />
+                      ) : (
+                        <ChevronRight size={16} className='text-gray-500 group-hover:text-gray-300' />
+                      )}
+                    </button>
 
-              <p className='text-gray-300 text-[12px] font-medium mb-3'>
-                Need expert guidance?
-              </p>
-
-              <Link
-                to='/contact'
-                className='text-[11px] text-white font-semibold hover:text-red-500 transition-colors uppercase tracking-wide'
-              >
-                Talk to Us →
-              </Link>
-            </div> */}
+                    {isOpen && (
+                      <ul className='mt-1 ml-3 pl-2 border-l border-red-600/30 space-y-1'>
+                        {machineItems.map(machine => (
+                          <li key={machine.id}>
+                            <Link
+                              to={`/machine/${machine.id}`}
+                              className='group flex items-center gap-2 px-2 py-1.5 rounded hover:bg-white/5 transition-all duration-150'
+                            >
+                              <div className='w-1 h-1 bg-red-600 rounded-full group-hover:scale-150 transition-transform'></div>
+                              <span className='text-[11px] font-semibold text-gray-400 group-hover:text-white uppercase tracking-wide truncate'>
+                                {machine.name}
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </aside>
 
-        
-
         {/* RIGHT CONTENT AREA */}
-        <main className='flex-1 bg-white'>
+        <main className='flex-1 bg-white w-full'>
           <div className='py-16 px-6 md:px-12 lg:px-16'>
-            {/* Page Header inside Main Content */}
-            <div className='mb-16'>
+            
+            {/* Page Main Header */}
+            <div className='mb-20'>
               <h2 className='text-red-700 font-bold tracking-[5px] uppercase text-[12px] mb-3'>
                 Industrial Precision
               </h2>
@@ -169,64 +335,74 @@ const AllMachines = () => {
               <div className='w-24 h-2 bg-red-700 mt-6'></div>
             </div>
 
-            {/* Machine Cards Grid */}
-            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-10'>
-              {machinesData.map(machine => (
-                <div
-                  key={machine.id}
-                  className='group relative bg-[#f8fafc] rounded-3xl overflow-hidden border border-gray-100 flex flex-col h-full hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-500'
-                >
-                  {/* Image Box */}
-                  <div className='relative h-72 overflow-hidden flex items-center justify-center p-10 bg-white group-hover:bg-gray-50 transition-colors duration-500'>
-                    <img
-                      src={machine.image}
-                      alt={machine.name}
-                      className='max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-700 ease-in-out'
-                    />
-                    <div className='absolute top-6 left-6 flex flex-col gap-2'>
-                      <span className='bg-[#0f172a] text-white text-[8px] font-black px-3 py-1 uppercase tracking-widest'>
-                        Premium
-                      </span>
+            {/* मशिन्स ग्रिड लिस्ट */}
+            <div className='space-y-24'>
+              {Object.keys(machinesData).map(categoryKey => {
+                const category = machinesData[categoryKey];
+                const machineItems = category.items || 
+                  (category.subcategories ? Object.values(category.subcategories).flatMap(sub => sub.items || []) : []);
+
+                if (machineItems.length === 0) return null;
+
+                return (
+                  <div key={categoryKey} className='border-b border-gray-100 pb-16 last:border-0 last:pb-0'>
+                    
+                    <div className='flex items-center gap-4 mb-10'>
+                      <h2 className='text-4xl font-black text-red-900 uppercase tracking-tight whitespace-nowrap'>
+                        {category.title || category.name}
+                      </h2>
+                      <div className='w-full h-[1px] bg-gray-200'></div>
                     </div>
-                  </div>
 
-                  {/* Details Box */}
-                  <div className='p-8 flex flex-col flex-grow'>
-                    <h3 className='text-2xl font-black text-[#0f172a] mb-4 uppercase tracking-tighter group-hover:text-red-700 transition-colors leading-tight'>
-                      {machine.name}
-                    </h3>
-                    <p className='text-gray-500 text-sm leading-relaxed mb-8 line-clamp-2 font-medium'>
-                      {machine.description}
-                    </p>
+                    <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-10'>
+                      {machineItems.map(machine => (
+                        <div
+                          key={machine.id}
+                          className='group relative bg-[#f8fafc] rounded-3xl overflow-hidden border border-gray-100 flex flex-col h-full hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-500'
+                        >
+                          <div className='relative h-72 overflow-hidden flex items-center justify-center p-10 bg-white group-hover:bg-gray-50 transition-colors duration-500'>
+                            <img
+                              src={machine.image}
+                              alt={machine.name}
+                              className='max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-700 ease-in-out'
+                            />
+                            <div className='absolute top-6 left-6'>
+                              <span className='bg-[#0f172a] text-white text-[8px] font-black px-3 py-1 uppercase tracking-widest'>
+                                Premium
+                              </span>
+                            </div>
+                          </div>
 
-                    <div className='mt-auto'>
-                      <Link
-                        to={`/machine/${machine.id}`}
-                        className='group/btn flex items-center justify-between w-full p-5 bg-[#0f172a] hover:bg-red-700 text-white rounded-xl transition-all duration-300 shadow-xl'
-                      >
-                        <span className='text-[10px] font-black uppercase tracking-[0.2em]'>
-                          Explore Machine
-                        </span>
-                        <div className='w-8 h-8 bg-white/10 rounded-full flex items-center justify-center group-hover/btn:bg-white group-hover/btn:text-red-700 transition-all'>
-                          <svg
-                            className='w-4 h-4'
-                            fill='none'
-                            stroke='currentColor'
-                            viewBox='0 0 24 24'
-                          >
-                            <path
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth='3'
-                              d='M14 5l7 7m0 0l-7 7m7-7H3'
-                            ></path>
-                          </svg>
+                          <div className='p-8 flex flex-col flex-grow'>
+                            <h3 className='text-2xl font-black text-[#0f172a] mb-4 uppercase tracking-tighter group-hover:text-red-700 transition-colors leading-tight'>
+                              {machine.name}
+                            </h3>
+                            <p className='text-gray-500 text-sm leading-relaxed mb-8 line-clamp-2 font-medium'>
+                              {machine.description}
+                            </p>
+
+                            <div className='mt-auto'>
+                              <Link
+                                to={`/machine/${machine.id}`}
+                                className='group/btn flex items-center justify-between w-full p-5 bg-[#0f172a] hover:bg-red-700 text-white rounded-xl transition-all duration-300 shadow-xl'
+                              >
+                                <span className='text-[10px] font-black uppercase tracking-[0.2em]'>
+                                  Explore Machine
+                                </span>
+                                <div className='w-8 h-8 bg-white/10 rounded-full flex items-center justify-center group-hover/btn:bg-white group-hover/btn:text-red-700 transition-all'>
+                                  <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='3' d='M14 5l7 7m0 0l-7 7m7-7H3'></path>
+                                  </svg>
+                                </div>
+                              </Link>
+                            </div>
+                          </div>
                         </div>
-                      </Link>
+                      ))}
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Simple Contact Footer */}
@@ -246,6 +422,7 @@ const AllMachines = () => {
                 Contact Specialist
               </Link>
             </div>
+
           </div>
         </main>
       </div>

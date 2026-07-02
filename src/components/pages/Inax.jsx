@@ -36,12 +36,20 @@ const Inax = () => {
           </h1>
 
           <p className='text-lg md:text-xl text-gray-200 max-w-xl mb-10 font-light leading-relaxed'>
-            i-NAX™, powered by Mech Chem Engineering Services, delivers advanced
-            laser cutting machines and CNC router systems designed for
-            precision, durability, and industrial performance. We supply
-            high-quality fiber laser, co<sub>2</sub> laser, crystal laser, and
-            CNC router machines for modern manufacturing industries across
-            Maharashtra.
+            i-NAX™, powered by{' '}
+            <a
+              href='https://www.mechchemindia.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-red-600 hover:text-red-700 underline font-semibold cursor-pointer transition-colors'
+            >
+              Mech Chem Engineering Services
+            </a>
+            , delivers advanced laser cutting machines and CNC router systems
+            designed for precision, durability, and industrial performance. We
+            supply high-quality fiber laser, co<sub>2</sub> laser, crystal
+            laser, and CNC router machines for modern manufacturing industries
+            across Maharashtra.
           </p>
 
           <div className='flex flex-wrap gap-4'>
@@ -75,9 +83,17 @@ const Inax = () => {
 
               <div className='relative'>
                 <p className='text-lg text-gray-600 leading-relaxed font-semibold mb-6'>
-                  Founded in 2012, Mech Chem Engineering Services has been
-                  delivering reliable industrial machinery and engineering
-                  solutions for over a decade.
+                  Founded in 2012,{' '}
+                  <a
+                    href='https://www.mechchemindia.com/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-red-600 hover:text-red-700 underline font-semibold cursor-pointer transition-colors'
+                  >
+                    Mech Chem Engineering Services
+                  </a>{' '}
+                  has been delivering reliable industrial machinery and
+                  engineering solutions for over a decade.
                 </p>
                 <p className='text-lg text-gray-600 leading-relaxed font-semibold mb-6'>
                   In 2024, we introduced i-NAX™, a premium brand focused on
@@ -156,9 +172,7 @@ const Inax = () => {
                         {item.desc}
                       </p>
                     </div>
-                    
                   </div>
-                  
                 ))}
               </div>
               <div className='pt-35'>
@@ -278,7 +292,7 @@ const Inax = () => {
       </section>
       {/* SECTION 5: PRODUCT RANGE */}
 
-      <section className='py-12 bg-slate-50'>
+      <section className='py-20 bg-slate-50'>
         <div className='max-w-7xl mx-auto px-4'>
           {/* Header Section */}
           <div className='flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4'>
@@ -307,50 +321,94 @@ const Inax = () => {
             </Link>
           </div>
 
-          {/* Product Grid - Mapping from machinesData */}
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10'>
-            {machinesData &&
-              machinesData.slice(0, 4).map(machine => (
-                <div
-                  key={machine.id}
-                  className='group bg-white rounded-3xl p-4 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full border border-slate-100'
-                >
-                  {/* Image Container */}
-                  <div className='relative h-64 overflow-hidden rounded-2xl bg-slate-100 mb-6'>
-                    <img
-                      src={machine.image}
-                      alt={machine.name}
-                      className='w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 p-4'
-                    />
-                    <div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6'>
-                      <span className='text-white text-[10px] font-bold uppercase tracking-widest'>
-                        i-NAX™ Series
-                      </span>
-                    </div>
-                  </div>
+          {/* ४ मशिन्सची ग्रिड (Smart Exact Filtering Logic) */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {(() => {
+              // १. सर्व मशिन्सचा डेटा आधी एकत्र (Flatten) करून घेऊया
+              let allItems = []
+              Object.keys(machinesData).forEach(categoryKey => {
+                const category = machinesData[categoryKey]
+                if (category.items && Array.isArray(category.items)) {
+                  allItems = [...allItems, ...category.items]
+                }
+                if (category.subcategories) {
+                  Object.values(category.subcategories).forEach(sub => {
+                    if (sub.items && Array.isArray(sub.items)) {
+                      allItems = [...allItems, ...sub.items]
+                    }
+                  })
+                }
+              })
 
-                  {/* Content */}
-                  <div className='px-2 flex flex-col flex-grow'>
-                    <h3 className='text-lg font-bold leading-tight text-[#0f172a] group-hover:text-red-700 transition-colors'>
-                      {machine.name}
-                    </h3>
-                    <p className='text-sm text-gray-500 mt-3 line-clamp-3'>
-                      {machine.des}
-                    </p>
+              // २. प्रत्येक प्रकारची पहिली मॅच होणारी मशीन शोधणे (Smarter Keywords)
+              // नावामध्ये 'fiber' आणि 'cutting' असणारी पहिली मुख्य मशीन
+              const fiberLaser =
+                allItems.find(m => {
+                  const n = m.name.toLowerCase()
+                  return (
+                    n.includes('fiber') &&
+                    n.includes('cutting') &&
+                    !n.includes('closed') &&
+                    !n.includes('open')
+                  )
+                }) || allItems.find(m => m.name.toLowerCase().includes('fiber'))
 
-                    <div className='mt-auto pt-6'>
-                      <Link
-                        to={`/machine/${machine.id}`}
-                        onClick={() => window.scrollTo(0, 0)}
-                      >
-                        <button className='w-full py-3 bg-slate-900 text-white text-[11px] font-bold uppercase tracking-widest rounded-xl hover:bg-red-700 transition-colors duration-300'>
-                          View Details
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
+              // नावामध्ये 'press brake' असणारी पहिली मशीन
+              const pressBrake = allItems.find(m =>
+                m.name.toLowerCase().includes('press brake')
+              )
+
+              // नावामध्ये फक्त 'router' असणारी पहिली मशीन
+              const cncRouter = allItems.find(m =>
+                m.name.toLowerCase().includes('router')
+              )
+
+              // नावामध्ये फक्त 'lathe' असणारी पहिली मशीन
+              const cncLathe = allItems.find(m =>
+                m.name.toLowerCase().includes('lathe')
+              )
+
+              // ३. या ४ मशिन्सचा ॲरे तयार करणे (जर एखादी मशीन नाही सापडली तर बॅकअप म्हणून ऑल आयटम्स मधून पहिली येईल)
+              return [
+                fiberLaser || allItems[0],
+                pressBrake || allItems[1],
+                cncRouter || allItems[2],
+                cncLathe || allItems[3]
+              ].filter(Boolean)
+            })().map(machine => (
+              <div
+                key={machine.id}
+                className='group bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col h-full hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] transition-all duration-300'
+              >
+                {/* Image Box */}
+                <div className='h-56 bg-white p-6 flex items-center justify-center relative overflow-hidden border-b border-gray-50'>
+                  <img
+                    src={machine.image}
+                    alt={machine.name}
+                    className='max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500'
+                  />
                 </div>
-              ))}
+
+                {/* Details Box */}
+                <div className='p-6 flex flex-col flex-grow'>
+                  <h3 className='text-lg font-black text-[#0f172a] uppercase tracking-tight line-clamp-2 mb-3 group-hover:text-red-700 transition-colors min-h-[56px]'>
+                    {machine.name}
+                  </h3>
+                  <p className='text-gray-500 text-xs leading-relaxed font-medium line-clamp-3 mb-6'>
+                    {machine.description}
+                  </p>
+
+                  {/* Explore Button */}
+                  <Link
+                    to={`/machine/${machine.id}`}
+                    onClick={() => window.scrollTo(0, 0)}
+                    className='mt-auto block w-full text-center py-3 bg-[#0f172a] hover:bg-red-700 text-white text-[10px] font-black uppercase tracking-widest rounded-xl transition-all duration-300 shadow-md hover:shadow-lg'
+                  >
+                    Explore Machine
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -767,7 +825,7 @@ const Inax = () => {
               <button className='bg-red-500 text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-xl'>
                 Contact Us Today
               </button>
-            </Link>  
+            </Link>
             {/* <button className='bg-white text-red-700 px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all'>
               Get Pricing
             </button> */}
