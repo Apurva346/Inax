@@ -41,8 +41,6 @@ function App() {
 
 export default App;
 
-
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Navbar from './components/common/Navbar';
 // import About from './components/pages/About';
 // import Contact from './components/pages/Contact';
